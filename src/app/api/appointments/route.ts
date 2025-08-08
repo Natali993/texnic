@@ -37,10 +37,10 @@ export async function POST(request: NextRequest) {
       { status: 201 }
     );
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error creating appointment:', error);
-    
-    if (error.name === 'ValidationError') {
+
+    if (error instanceof Error && error.name === 'ValidationError') {
       return NextResponse.json(
         { error: 'Validation error', details: error.message },
         { status: 400 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 interface Appointment {
   _id: string;
@@ -50,7 +50,7 @@ export default function AdminPage() {
     cancelled: 'bg-red-100 text-red-800'
   };
 
-  const fetchAppointments = async () => {
+  const fetchAppointments = useCallback(async () => {
     setLoading(true);
     try {
       const params = new URLSearchParams({
@@ -74,11 +74,11 @@ export default function AdminPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [currentPage, statusFilter]);
 
   useEffect(() => {
     fetchAppointments();
-  }, [currentPage, statusFilter]);
+  }, [fetchAppointments]);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleString('uk-UA');

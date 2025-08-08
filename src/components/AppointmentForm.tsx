@@ -60,7 +60,7 @@ export default function AppointmentForm() {
         setSubmitStatus('error');
         setErrorMessage(data.error || 'Помилка при відправці заявки');
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
       setErrorMessage('Помилка мережі. Спробуйте ще раз.');
     } finally {
