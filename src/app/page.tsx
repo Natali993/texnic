@@ -146,7 +146,7 @@ export default function Home() {
                   <div className="text-gray-600">Задоволених клієнтів</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-indigo-600 mb-2">15+</div>
+                  <div className="text-3xl font-bold text-indigo-600 mb-2">1+</div>
                   <div className="text-gray-600">Досвідчених спеціалістів</div>
                 </div>
               </div>
