@@ -29,10 +29,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Професійна психологічна допомога
+              Медтчний центр "Solis"
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Ми надаємо якісні медичні послуги в галузі психології для підтримки вашого ментального здоров&apos;я та благополуччя
+            Місце, де починається нове життя без залежностей. Медична, психіатрична та реабілітаційна допомога з індивідуальним підходом.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#appointment" className="bg-indigo-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-indigo-700 transition duration-300">
@@ -50,9 +50,7 @@ export default function Home() {
       <section id="services" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Сфера  діяльності
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Наші послуги</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Ми пропонуємо широкий спектр психологічних послуг для різних потреб та вікових груп
             </p>
