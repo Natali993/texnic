@@ -1,4 +1,5 @@
 import AppointmentForm from '@/components/AppointmentForm';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -9,17 +10,29 @@ export default function Home() {
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <h1 className="text-2xl font-bold text-indigo-600">PsyHealth</h1>
+                <h1 className="text-2xl font-bold text-indigo-600">Solis</h1>
               </div>
             </div>
-            <nav className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <a href="#services" className="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Послуги</a>
-                <a href="#about" className="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Про нас</a>
-                <a href="#contact" className="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Контакти</a>
-                <a href="#appointment" className="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700">Записатися</a>
+            <div className="flex items-center space-x-8">
+              <nav className="hidden md:block">
+                <div className="flex items-baseline space-x-4">
+                  <a href="#services" className="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Послуги</a>
+                  <a href="#about" className="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Про нас</a>
+                  <a href="#contact" className="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Контакти</a>
+                  <a href="#appointment" className="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700">Записатися</a>
+                </div>
+              </nav>
+              <div className="flex-shrink-0">
+                <Image
+                  src="/solis-logo.png"
+                  alt="Solis Medical Center Logo"
+                  width={120}
+                  height={60}
+                  className="h-12 w-auto"
+                  priority
+                />
               </div>
-            </nav>
+            </div>
           </div>
         </div>
       </header>
@@ -29,7 +42,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Медтчний центр "Solis"
+              Медичний центр "Solis"
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Місце, де починається нове життя без залежностей. Медична, психіатрична та реабілітаційна допомога з індивідуальним підходом.
