@@ -1,4 +1,5 @@
 import AppointmentForm from '@/components/AppointmentForm';
+import AuthNav from '@/components/AuthNav';
 import Image from 'next/image';
 
 export default function Home() {
@@ -23,14 +24,17 @@ export default function Home() {
                 <h1 className="text-2xl font-bold text-indigo-600">Медичний центр &quot;Solis&quot;</h1>
               </div>
             </div>
-            <nav className="hidden md:block">
-              <div className="flex items-baseline space-x-4">
-                <a href="#services" className="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Послуги</a>
-                <a href="#about" className="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Про нас</a>
-                <a href="#contact" className="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Контакти</a>
-                <a href="#appointment" className="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700">Записатися</a>
-              </div>
-            </nav>
+            <div className="flex items-center space-x-8">
+              <nav className="hidden md:block">
+                <div className="flex items-baseline space-x-4">
+                  <a href="#services" className="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Послуги</a>
+                  <a href="#about" className="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Про нас</a>
+                  <a href="#contact" className="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Контакти</a>
+                  <a href="#appointment" className="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700">Записатися</a>
+                </div>
+              </nav>
+              <AuthNav />
+            </div>
           </div>
         </div>
       </header>
