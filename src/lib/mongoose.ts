@@ -26,24 +26,54 @@ if (!cached) {
 
 async function connectToDatabase() {
   if (cached.conn) {
-    return cached.conn;
+    // Check if connection is still alive
+    if (mongoose.connection.readyState === 1) {
+      return cached.conn;
+    } else {
+      // Connection is dead, reset cache
+      cached.conn = null;
+      cached.promise = null;
+    }
   }
 
   if (!cached.promise) {
     const opts = {
       bufferCommands: false,
+      maxPoolSize: 10,
+      serverSelectionTimeoutMS: 5000,
+      socketTimeoutMS: 45000,
+      family: 4
     };
 
     cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
+      console.log('MongoDB connected successfully');
       return mongoose;
+    }).catch((error) => {
+      console.error('MongoDB connection error:', error);
+      cached.promise = null;
+      throw error;
     });
   }
 
   try {
     cached.conn = await cached.promise;
   } catch (e) {
+    console.error('Failed to connect to MongoDB:', e);
     cached.promise = null;
-    throw e;
+
+    // Try to reconnect with simpler options
+    try {
+      console.log('Attempting reconnection with basic options...');
+      cached.promise = mongoose.connect(MONGODB_URI, {
+        bufferCommands: false,
+        serverSelectionTimeoutMS: 10000,
+      });
+      cached.conn = await cached.promise;
+      console.log('MongoDB reconnected successfully');
+    } catch (reconnectError) {
+      console.error('MongoDB reconnection failed:', reconnectError);
+      throw reconnectError;
+    }
   }
 
   return cached.conn;
