@@ -9,9 +9,7 @@ const options = {
   maxPoolSize: 10,
   serverSelectionTimeoutMS: 5000,
   socketTimeoutMS: 45000,
-  family: 4,
-  retryWrites: true,
-  w: 'majority'
+  family: 4
 };
 
 let client: MongoClient;
