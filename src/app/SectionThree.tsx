@@ -72,7 +72,7 @@ export function SectionThree() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-center mb-12">
-        <h1>Інструмент в ПРОКАТ</h1>
+        <h1 className="text-center font-serif uppercase tracking-[0.06em] leading-none text-[#133553] text-[42px] md:text-[56px] lg:text-[64px]">Інструмент в ПРОКАТ</h1>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

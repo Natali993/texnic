@@ -3,6 +3,8 @@ import { Header } from './Header';
 import { SectionFirst } from './SectionFirst';
 import { SectionSecond } from './SectionSecond';
 import { SectionThree } from './SectionThree';
+import { SectionFourth } from './SectionFourth';
+
 export default function Home() {
   return (
 
@@ -13,6 +15,7 @@ export default function Home() {
         <SectionFirst/>
         <SectionSecond/>
         <SectionThree/>
+        <SectionFourth/>
       </main>
       <Footer />
     </div>

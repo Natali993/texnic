@@ -29,7 +29,9 @@ export const SectionSecond = () => {
             <div className="container mx-auto px-4">
 
                 <div className="w-full text-center mb-10">
-                    <h1>ПРОКАТ</h1>
+                    <h1 className="text-center font-serif uppercase tracking-[0.06em] leading-none text-[#133553] text-[42px] md:text-[56px] lg:text-[64px]">
+  ПРОКАТ
+</h1>
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-8">
