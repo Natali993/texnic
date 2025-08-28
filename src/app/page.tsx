@@ -5,6 +5,7 @@ import { SectionSecond } from './SectionSecond';
 import { SectionThree } from './SectionThree';
 import { SectionFourth } from './SectionFourth';
 import { SectionFifth } from './SectionFifth';
+import { SectionSixth } from './api/SectionSixth';
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <SectionThree/>
         <SectionFourth/>
         <SectionFifth/>
+        <SectionSixth/>
       </main>
       <Footer />
     </div>
