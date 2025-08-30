@@ -47,7 +47,7 @@ const Logo = () => {
           className="object-contain mb-4 mx-auto"
         />
         <p className="text-gray-400 text-sm max-w-xs">
-          Професійний прокат та ремонт інструментів для будівництва та садівництва
+          Професійні електромонтажні роботи, встановлення електричних мереж та сонячних електростанцій
         </p>
       </div>
     </div>
@@ -70,11 +70,11 @@ const CategoriesMenu = () => {
         </li>
         <li>
           <Link
-            href="/prokat"
+            href="/elektromontazhni-roboty"
             className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-2"
           >
             <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-            <span>Прокат</span>
+            <span>Електромонтаж</span>
           </Link>
         </li>
         <li>
@@ -88,20 +88,20 @@ const CategoriesMenu = () => {
         </li>
         <li>
           <Link
-            href="/remont-honda"
+            href="/sonychni-elektrostancii"
             className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-2"
           >
             <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-            <span>Ремонт Honda GX</span>
+            <span>Сонячні електростанції</span>
           </Link>
         </li>
         <li>
           <Link
-            href="/zluka"
+            href="/blyskaykozahyst"
             className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-2"
           >
             <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-            <span>Злука</span>
+            <span>Блискавкозахист</span>
           </Link>
         </li>
       </ul>
@@ -155,7 +155,7 @@ export const Footer = () => {
         <SocialLinks />
         <div className="text-center pt-8 border-t border-gray-700 mt-8">
           <p className="text-gray-400 text-sm">
-            © 2024 TechProkat. Всі права захищені.
+            © 2024 ElektroMontazh. Всі права захищені.
           </p>
         </div>
 []      </div>

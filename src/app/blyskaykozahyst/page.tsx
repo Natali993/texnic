@@ -1,0 +1,161 @@
+import { Header } from '../Header';
+import { Footer } from '../Footer';
+import Link from 'next/link';
+
+export default function Blyskaykozahyst() {
+  return (
+    <div className="flex flex-col min-h-screen font-sans text-gray-700">
+      <Header />
+      <main className="flex-1 bg-white pt-32">
+        <div className="container mx-auto px-4 py-16">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-gray-800 mb-6">
+              <span className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">
+                Системи
+              </span>{' '}
+              блискавкозахисту
+            </h1>
+            <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-teal-500 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Професійне проектування та монтаж систем блискавкозахисту для будівель та споруд
+            </p>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Зовнішній блискавкозахист</h3>
+              <p className="text-gray-600 mb-4">
+                Встановлення блискавковідводів та заземлюючих пристроїв для захисту будівель.
+              </p>
+              <ul className="text-gray-600 space-y-2">
+                <li>• Стрижневі блискавковідводи</li>
+                <li>• Тросові блискавковідводи</li>
+                <li>• Сітчасті блискавковідводи</li>
+                <li>• Заземлюючі контури</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Внутрішній блискавкозахист</h3>
+              <p className="text-gray-600 mb-4">
+                Захист електричного обладнання від імпульсних перенапруг.
+              </p>
+              <ul className="text-gray-600 space-y-2">
+                <li>• УЗІП (пристрої захисту від імпульсних перенапруг)</li>
+                <li>• Розрядники</li>
+                <li>• Обмежувачі перенапруг</li>
+                <li>• Екранування кабелів</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Why Important Section */}
+          <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-12 mb-16 border border-red-100">
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Чому важливий блискавкозахист?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Безпека людей</h3>
+                <p className="text-gray-600">Захист від ураження блискавкою та пожеж</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Захист обладнання</h3>
+                <p className="text-gray-600">Запобігання пошкодженню електронної техніки</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Економія коштів</h3>
+                <p className="text-gray-600">Уникнення витрат на ремонт та заміну</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Process Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Етапи роботи</h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">
+                  1
+                </div>
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Обстеження</h3>
+                <p className="text-gray-600">Аналіз об'єкта та розрахунок ризиків</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">
+                  2
+                </div>
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Проектування</h3>
+                <p className="text-gray-600">Розробка проекту системи захисту</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">
+                  3
+                </div>
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Монтаж</h3>
+                <p className="text-gray-600">Встановлення обладнання та заземлення</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">
+                  4
+                </div>
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Тестування</h3>
+                <p className="text-gray-600">Перевірка працездатності системи</p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-12 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Захистіть свій об'єкт від блискавки
+            </h2>
+            <p className="text-gray-300 mb-8 text-lg">
+              Отримайте професійну консультацію з блискавкозахисту
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <Link 
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                Залишити заявку
+              </Link>
+              <Link 
+                href="/posluhy"
+                className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all duration-300"
+              >
+                Всі послуги
+              </Link>
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+}

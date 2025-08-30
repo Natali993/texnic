@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const SectionFirst = () => {
+export const HeroSection = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
       {/* Background Pattern */}
@@ -17,23 +17,23 @@ export const SectionFirst = () => {
             <div className="max-w-xl">
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
-                  ПРОКАТ
+                  ЕЛЕКТРОМОНТАЖНІ
                 </span>
                 <br />
-                <span className="text-white">ІНСТРУМЕНТІВ</span>
+                <span className="text-white">РОБОТИ</span>
               </h1>
               
               <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-teal-400 mb-6"></div>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Професійний прокат будівельних та садових інструментів. 
-                Якісне обладнання для ваших проектів за доступними цінами.
+                Професійні електромонтажні роботи, встановлення електричних мереж, 
+                трансформаторних підстанцій та сонячних електростанцій.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
-                  <div className="text-sm text-gray-400">Інструментів</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">100+</div>
+                  <div className="text-sm text-gray-400">Проектів</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">15+</div>
@@ -47,16 +47,16 @@ export const SectionFirst = () => {
 
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <Link 
-                  href="/prokat"
+                  href="/posluhy"
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center"
                 >
-                  Переглянути каталог
+                  Наші послуги
                 </Link>
                 <Link 
                   href="/contact"
                   className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all duration-300 text-center"
                 >
-                  Зв'язатися з нами
+                  Залишити заявку
                 </Link>
               </div>
             </div>
@@ -69,7 +69,7 @@ export const SectionFirst = () => {
               <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <Image
                   src="/sectionFirst.png"
-                  alt="Професійні інструменти"
+                  alt="Електромонтажні роботи"
                   width={600}
                   height={400}
                   className="rounded-xl shadow-2xl"
@@ -87,7 +87,7 @@ export const SectionFirst = () => {
                 </div>
                 <div>
                   <div className="text-white font-semibold">Якість</div>
-                  <div className="text-gray-400 text-sm">Перевірені бренди</div>
+                  <div className="text-gray-400 text-sm">Сертифіковані роботи</div>
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@ export const SectionFirst = () => {
                 </div>
                 <div>
                   <div className="text-white font-semibold">Швидко</div>
-                  <div className="text-gray-400 text-sm">Оренда за годину</div>
+                  <div className="text-gray-400 text-sm">Терміни виконання</div>
                 </div>
               </div>
             </div>

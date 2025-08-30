@@ -31,8 +31,8 @@ const NavigationMenu = () => {
             </Link>
           </li>
           <li>
-            <Link href="/prokat" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Прокат
+            <Link href="/elektromontazhni-roboty" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Електромонтаж
             </Link>
           </li>
           <li>
@@ -41,13 +41,13 @@ const NavigationMenu = () => {
             </Link>
           </li>
           <li>
-            <Link href="/remont-honda" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Ремонт Honda GX
+            <Link href="/sonychni-elektrostancii" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Сонячні електростанції
             </Link>
           </li>
           <li>
-            <Link href="/zluka" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Злука
+            <Link href="/blyskaykozahyst" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Блискавкозахист
             </Link>
           </li>
           <li>
@@ -86,8 +86,8 @@ const NavigationMenu = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/prokat" className="block hover:text-cyan-400 transition-colors duration-300">
-                  Прокат
+                <Link href="/elektromontazhni-roboty" className="block hover:text-cyan-400 transition-colors duration-300">
+                  Електромонтаж
                 </Link>
               </li>
               <li>
@@ -96,13 +96,13 @@ const NavigationMenu = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/remont-honda" className="block hover:text-cyan-400 transition-colors duration-300">
-                  Ремонт Honda GX
+                <Link href="/sonychni-elektrostancii" className="block hover:text-cyan-400 transition-colors duration-300">
+                  Сонячні електростанції
                 </Link>
               </li>
               <li>
-                <Link href="/zluka" className="block hover:text-cyan-400 transition-colors duration-300">
-                  Злука
+                <Link href="/blyskaykozahyst" className="block hover:text-cyan-400 transition-colors duration-300">
+                  Блискавкозахист
                 </Link>
               </li>
               <li>
@@ -130,16 +130,6 @@ const Subheader = () => {
               </svg>
               <span>+38 (067) 360 75 20</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <svg className="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-              </svg>
-              <span>techprokat.rv.ua@gmail.com</span>
-            </div>
-          </div>
-          <div className="flex items-center space-x-4">
-            <span className="text-xs">м. Рівне, вул Київська, 42</span>
           </div>
         </div>
       </div>
