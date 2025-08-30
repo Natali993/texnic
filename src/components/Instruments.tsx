@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CustomTitle } from './Title';
 
-export function SectionThree() {
+export const Instruments = () => {
   const categories = [
     {
       name: 'ЕЛЕКТРОІНСТРУМЕНТ',
@@ -67,7 +67,7 @@ export function SectionThree() {
       imageHeight: 420,
       altText: 'Cleaning equipment',
       href: '/sadovui-instrument/',
-    },
+    }
   ];
 
   return (

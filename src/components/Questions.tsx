@@ -2,7 +2,7 @@ import React from 'react';
 import { CustomTitle } from './Title';
 
 
-export const SSectionSeventh = () => {
+export const Questions = () => {
 
   return (
     <div className="bg-white">

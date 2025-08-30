@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export const SectionFifth = () => {
+export const Benefits = () => {
 
   return (
 <div className="g-cols wpb_row offset_small vc_inner">

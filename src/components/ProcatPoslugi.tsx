@@ -24,7 +24,7 @@ const NavBlock = ({ href, src, alt, width, height }: any) => {
     )
 }
 
-export const SectionSecond = () => {
+export const ProcatPoslugi = () => {
     return (
         <div className="">
             <div className="container mx-auto px-4">
