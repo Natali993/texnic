@@ -1,16 +1,11 @@
 import React from 'react';
-
+import { CustomTitle } from './Title';
 
 export const SectionFourth = () => {
-  
+
   return (
     <div className="bg-white p-4 md:p-8 rounded-lg shadow-xl">
-      <div className="flex justify-center w-full mb-8">
-        <h1 className="text-center font-serif uppercase tracking-[0.06em] leading-none text-[#133553] text-[42px] md:text-[56px] lg:text-[64px]">
-          РЕмонт ДВИГУНІВ GX
-        </h1>
-      </div>
-
+      <CustomTitle>РЕмонт ДВИГУНІВ GX</CustomTitle>
       {/* Main content section with two columns */}
       <div className="flex flex-col md:flex-row items-start gap-8">
         {/* Left column - image and small text */}

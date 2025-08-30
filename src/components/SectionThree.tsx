@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { CustomTitle } from './Title';
 
 export function SectionThree() {
   const categories = [
@@ -35,7 +36,7 @@ export function SectionThree() {
       altText: 'Cleaning equipment',
       href: '/kliningova-tehnika/',
     },
-     {
+    {
       name: 'ВІБРОПЛИТИ',
       imageSrc: '/section-procat-itstrument-5.png',
       imageWidth: 390,
@@ -43,14 +44,14 @@ export function SectionThree() {
       altText: 'Cleaning equipment',
       href: '/vibriplutu/'
     },
-     {
+    {
       name: 'ПЕРФОРАТОРИ BOSCH',
       imageSrc: '/section-procat-itstrument-6.png',
       imageWidth: 390,
       imageHeight: 420,
       altText: 'Cleaning equipment',
       href: '/pervorator-bosch/',
-    }, 
+    },
     {
       name: 'БЕНЗИНОВІ ГЕНЕРАТОРИ',
       imageSrc: '/section-procat-itstrument-7.png',
@@ -59,22 +60,21 @@ export function SectionThree() {
       altText: 'Cleaning equipment',
       href: '/benzynovi-generatoru/',
     },
-     {
+    {
       name: 'САДОВИЙ інструмент',
       imageSrc: '/section-procat-itstrument-8.png',
       imageWidth: 390,
       imageHeight: 420,
       altText: 'Cleaning equipment',
       href: '/sadovui-instrument/',
-    }, 
+    },
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="flex justify-center mb-12">
-        <h1 className="text-center font-serif uppercase tracking-[0.06em] leading-none text-[#133553] text-[42px] md:text-[56px] lg:text-[64px]">Інструмент в ПРОКАТ</h1>
-      </div>
-
+    <div className="container mx-auto px-4 ">
+      <CustomTitle>
+        Інструмент в ПРОКАТ
+      </CustomTitle>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {categories.map((category, index) => (
           <div key={index} className="flex flex-col items-center text-center">
