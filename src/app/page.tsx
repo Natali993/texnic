@@ -4,7 +4,7 @@ import { Benefits } from '../components/Benefits';
 import { OurPartners } from '../components/OurPartners';
 import { Questions } from '../components/Questions';
 import { Map } from '../components/Map';
-import { CustomLayout } from './CustomLayout';
+import { CustomLayout } from '../components/CustomLayout';
 import { ProcatPoslugi } from '@/components/ProcatPoslugi';
 import { RemontDviguniv } from '@/components/RemontDviguniv';
 

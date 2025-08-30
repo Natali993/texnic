@@ -36,7 +36,7 @@ const MainHeader = () => {
             <li><Link href="/"><p className="hover:text-blue-600">Головна</p></Link></li>
             <li><Link href="/about"><p className="hover:text-blue-600">Про нас</p></Link></li>
             <li><Link href="/rent"><p className="hover:text-blue-600">Прокат</p></Link></li>
-            <li><Link href="/services"><p className="hover:text-blue-600">Послуги</p></Link></li>
+            <li><Link href="/posluhy"><p className="hover:text-blue-600">Послуги</p></Link></li>
             <li><Link href="/remont-honda"><p className="hover:text-blue-600">Ремонт Honda GX</p></Link></li>
             <li><Link href="/contact"><p className="hover:text-blue-600">Контакти</p></Link></li>
           </ul>
