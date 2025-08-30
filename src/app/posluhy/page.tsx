@@ -53,7 +53,7 @@ export default function Posluhy() {
   return (
     <div className="flex flex-col min-h-screen font-sans text-gray-700">
       <Header />
-      <main className="flex-1 bg-white pt-32">
+      <main className="flex-1 bg-white pt-24 md:pt-28 lg:pt-32">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-gray-800 mb-6">
