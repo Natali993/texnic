@@ -38,7 +38,7 @@ const Contacts = () => {
 const Logo = () => {
   return (
     <div className="w-full md:w-1/3 flex justify-center items-center mb-8 md:mb-0">
-      <div className="text-center">
+      <div className="text-center px-8">
         <Image
           src="/logotup.png"
           alt="Company Logo"
