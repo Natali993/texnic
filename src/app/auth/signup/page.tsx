@@ -84,7 +84,7 @@ export default function SignUp() {
           <div className="flex justify-center mb-6">
             <Image
               src="/solis-logo.png"
-              alt="Solis Medical Center Logo"
+              alt="Технік Logo"
               width={120}
               height={60}
               className="h-16 w-auto"
