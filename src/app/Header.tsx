@@ -7,9 +7,9 @@ const Logo = () => {
   return (
     <Link href="/" className="flex items-center">
       <Image
-        src="/picturesHeader/logo.png"
+        src="/logotup.png"
         alt="Company Logo"
-        width={150}
+        width={100}
         height={50}
         className="object-contain"
       />
@@ -35,6 +35,7 @@ const NavigationMenu = () => {
               Електромонтаж
             </Link>
           </li>
+          
           <li>
             <Link href="/posluhy" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
               Послуги
@@ -48,6 +49,11 @@ const NavigationMenu = () => {
           <li>
             <Link href="/blyskaykozahyst" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
               Блискавкозахист
+            </Link>
+          </li>
+          <li>
+            <Link href="/antifire-obrobka" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Протипожежна обробка
             </Link>
           </li>
           <li>
@@ -103,6 +109,11 @@ const NavigationMenu = () => {
               <li>
                 <Link href="/blyskaykozahyst" className="block hover:text-cyan-400 transition-colors duration-300">
                   Блискавкозахист
+                </Link>
+              </li>
+              <li>
+                <Link href="/antifire-obrobka" className="block hover:text-cyan-400 transition-colors duration-300">
+                  Протипожежна обробка
                 </Link>
               </li>
               <li>

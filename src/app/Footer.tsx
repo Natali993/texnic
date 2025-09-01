@@ -40,10 +40,10 @@ const Logo = () => {
     <div className="w-full md:w-1/3 flex justify-center items-center mb-8 md:mb-0">
       <div className="text-center">
         <Image
-          src="/picturesHeader/logo.png"
+          src="/logotup.png"
           alt="Company Logo"
-          width={200}
-          height={80}
+          width={100}
+          height={50}
           className="object-contain mb-4 mx-auto"
         />
         <p className="text-gray-400 text-sm max-w-xs">
