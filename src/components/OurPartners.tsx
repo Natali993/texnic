@@ -11,7 +11,7 @@ export const OurPartners = () => {
         <div className="w-full md:w-1/2 flex justify-center">
           <a href="https://osushiteli.ua/" target="_blank" rel="noopener noreferrer">
             <img
-              src="partner1.png"
+              src="/partner-1-optimized.jpg"
               alt="Partner logo 1"
               className="w-full max-w-xl object-contain cursor-pointer"
             />
@@ -20,7 +20,7 @@ export const OurPartners = () => {
 
         <div className="w-full md:w-1/2 flex justify-center">
           <img
-            src="partner2.png"
+            src="/partner-2-optimized.jpg"
             alt="Partner logo 2"
             className="w-full max-w-xl object-contain"
           />

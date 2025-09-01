@@ -6,7 +6,7 @@ export const Instruments = () => {
   const categories = [
     {
       name: 'ЕЛЕКТРОІНСТРУМЕНТ',
-      imageSrc: '/section-procat-itstrument-1.png',
+      imageSrc: '/power-drill.jpg',
       imageWidth: 390,
       imageHeight: 420,
       altText: 'Power tools',
@@ -14,7 +14,7 @@ export const Instruments = () => {
     },
     {
       name: 'ДЛЯ БЕТОННИХ РОБІТ',
-      imageSrc: '/section-procat-itstrument-2.png',
+      imageSrc: '/concrete-mixer.jpg',
       imageWidth: 390,
       imageHeight: 420,
       altText: 'For concrete work',
@@ -22,7 +22,7 @@ export const Instruments = () => {
     },
     {
       name: 'ВІДБІЙНІ МОЛОТКИ',
-      imageSrc: '/section-procat-itstrument-3.png',
+      imageSrc: '/jackhammer.jpg',
       imageWidth: 390,
       imageHeight: 420,
       altText: 'Demolition hammers',
@@ -30,7 +30,7 @@ export const Instruments = () => {
     },
     {
       name: 'КЛІНІНГОВА техніка',
-      imageSrc: '/section-procat-itstrument-4.png',
+      imageSrc: '/cleaning-equipment.jpg',
       imageWidth: 390,
       imageHeight: 420,
       altText: 'Cleaning equipment',
@@ -38,34 +38,34 @@ export const Instruments = () => {
     },
     {
       name: 'ВІБРОПЛИТИ',
-      imageSrc: '/section-procat-itstrument-5.png',
+      imageSrc: '/concrete-mixer.jpg',
       imageWidth: 390,
       imageHeight: 420,
-      altText: 'Cleaning equipment',
+      altText: 'Vibrating plates',
       href: '/vibriplutu/'
     },
     {
       name: 'ПЕРФОРАТОРИ BOSCH',
-      imageSrc: '/section-procat-itstrument-6.png',
+      imageSrc: '/power-drill.jpg',
       imageWidth: 390,
       imageHeight: 420,
-      altText: 'Cleaning equipment',
+      altText: 'Bosch perforators',
       href: '/pervorator-bosch/',
     },
     {
       name: 'БЕНЗИНОВІ ГЕНЕРАТОРИ',
-      imageSrc: '/section-procat-itstrument-7.png',
+      imageSrc: '/electrical-substation.jpg',
       imageWidth: 390,
       imageHeight: 420,
-      altText: 'Cleaning equipment',
+      altText: 'Gasoline generators',
       href: '/benzynovi-generatoru/',
     },
     {
       name: 'САДОВИЙ інструмент',
-      imageSrc: '/section-procat-itstrument-8.png',
+      imageSrc: '/garden-tools.jpg',
       imageWidth: 390,
       imageHeight: 420,
-      altText: 'Cleaning equipment',
+      altText: 'Garden tools',
       href: '/sadovui-instrument/',
     }
   ];

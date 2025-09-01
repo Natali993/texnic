@@ -10,10 +10,10 @@ export const Benefits = () => {
       <img
         loading="lazy"
         decoding="async"
-        width="10418"
-        height="797"
-        src="perevagi.png"
-        alt=""
+        width="800"
+        height="300"
+        src="/power-lines.jpg"
+        alt="Переваги наших послуг"
         className="w-full h-auto"
       />
     </div>

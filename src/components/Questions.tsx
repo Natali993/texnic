@@ -16,7 +16,7 @@ export const Questions = () => {
             loading="lazy"
             decoding="async"
             className="w-[33px] h-[33px] object-contain"
-            src="telephone.png"
+            src="/phone-icon.svg"
             alt="Phone icon"
             width="33"
             height="33"

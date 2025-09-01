@@ -48,52 +48,52 @@ export function SpecializedServicesSection() {
   const categories = [
     {
       name: 'ВНУТРІШНІ РОБОТИ',
-      imageSrc: '/section-procat-itstrument-1.png',
-      altText: 'Внутрішні електромонтажні роботи',
+      imageSrc: '/electrician-work-small.jpg',
+      altText: 'Професійний електрик європейської зовнішності встановлює внутрішню електропроводку',
       href: '/vnutrishni-roboty/',
     },
     {
       name: 'ПРОТИПОЖЕЖНА ОБРОБКА',
-      imageSrc: '/section-procat-itstrument-2.png',
-      altText: 'Протипожежна обробка',
+      imageSrc: '/fire-alarm-installation.jpg',
+      altText: 'Встановлення протипожежних систем та електричної сигналізації',
       href: '/protypozhezhna-obrobka/',
     },
     {
       name: 'СИСТЕМИ БЕЗПЕКИ',
-      imageSrc: '/section-procat-itstrument-3.png',
-      altText: 'Системи безпеки',
+      imageSrc: '/security-surveillance.jpg',
+      altText: 'Встановлення камер відеоспостереження та систем безпеки',
       href: '/systemy-bezpeky/',
     },
     {
       name: 'ОСВІТЛЕННЯ',
-      imageSrc: '/section-procat-itstrument-4.png',
-      altText: 'Системи освітлення',
+      imageSrc: '/street-lighting-small.jpg',
+      altText: 'Встановлення вуличного освітлення на вишці електромонтажниками',
       href: '/osvitlennya/',
     },
     {
       name: 'АВТОМАТИЗАЦІЯ',
-      imageSrc: '/section-procat-itstrument-5.png',
-      altText: 'Системи автоматизації',
+      imageSrc: '/automation-small.jpg',
+      altText: 'Електричні панелі управління та системи автоматизації',
       href: '/avtomatyzaciya/'
     },
     {
       name: 'ЕНЕРГОАУДИТ',
-      imageSrc: '/section-procat-itstrument-6.png',
-      altText: 'Енергетичний аудит',
+      imageSrc: '/industrial-energy-audit.jpg',
+      altText: 'Енергетичний аудит промислових об\'єктів та електрообладнання',
       href: '/energoaudyt/',
-    }, 
+    },
     {
       name: 'КОНСУЛЬТАЦІЇ',
-      imageSrc: '/section-procat-itstrument-7.png',
-      altText: 'Технічні консультації',
+      imageSrc: '/consultation-small.jpg',
+      altText: 'Професійні консультації з електромонтажу від українських спеціалістів',
       href: '/konsultacii/',
     },
     {
       name: 'СЕРВІС',
-      imageSrc: '/section-procat-itstrument-8.png',
-      altText: 'Сервісне обслуговування',
+      imageSrc: '/electrical-maintenance.jpg',
+      altText: 'Технічне обслуговування електрообладнання',
       href: '/servis/',
-    }, 
+    },
   ];
 
   return (

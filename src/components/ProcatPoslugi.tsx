@@ -30,15 +30,15 @@ export const ProcatPoslugi = () => {
             <div className="container mx-auto px-4">
                 <CustomTitle>ПРОКАТ</CustomTitle>
                 <div className="flex flex-col md:flex-row gap-8">
-                    <NavBlock href={"/prokat"} src={"/section-second-prokat.png"} alt={"Прокат"} width={670} height={865} />
+                    <NavBlock href={"/prokat"} src={"/power-drill.jpg"} alt={"Прокат"} width={600} height={400} />
                     <div className="w-full md:w-1/2">
                         <Link href="/posluhy">
                             <div className="w-image align_center transition-transform duration-300 hover:scale-105 rounded-lg overflow-hidden shadow-lg">
                                 <Image
-                                    src="/section-second-poslugi.png"
+                                    src="/electrician-work.jpg"
                                     alt="Послуги"
-                                    width={678}
-                                    height={875}
+                                    width={600}
+                                    height={400}
                                     layout="responsive"
                                 />
                             </div>

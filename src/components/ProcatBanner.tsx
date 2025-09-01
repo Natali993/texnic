@@ -7,10 +7,10 @@ export const ProcatBanner = () => {
     <div className="container mx-auto">
       <Link className="relative w-full overflow-hidden rounded-lg shadow-lg" href="/orenda-elektroinstrymentiv">
         <Image
-          src="/sectionFirst.png"
+          src="/power-lines.jpg"
           alt="Слайдер"
-          width={2500}
-          height={900}
+          width={800}
+          height={600}
           layout="responsive"
           className="rounded-lg"
         />

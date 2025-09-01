@@ -15,10 +15,9 @@ export const RemontDviguniv = () => {
             decoding="async"
             width="300"
             height="300"
-            src="remontdvig.png"
+            src="/power-drill.jpg"
             className="w-full max-w-[300px] h-auto rounded-lg"
             alt="Ремонт двигунів HONDA GX"
-            srcSet="remontdvig.png 300w, remontdvig.png-150x150.png 150w, remontdvig.png-350x350.png 350w, remontdvig.png-600x600.png 600w, remontdvig.png 699w"
             sizes="(max-width: 300px) 100vw, 300px"
           />
           {/* Replaced empty spans with padding */}

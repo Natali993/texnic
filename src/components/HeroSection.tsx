@@ -68,8 +68,8 @@ export const HeroSection = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-2xl blur opacity-30"></div>
               <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <Image
-                  src="/sectionFirst.png"
-                  alt="Електромонтажні роботи"
+                  src="/electrical-tower-work-small.jpg"
+                  alt="Електромонтажники європейської зовнішності працюють на вишці"
                   width={600}
                   height={400}
                   className="rounded-xl shadow-2xl"
