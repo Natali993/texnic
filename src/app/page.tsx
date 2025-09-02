@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
       <main className="flex-1 bg-white">
         <HeroSection />
-        <ServicesSection />
+        {/* <ServicesSection /> */}
         <SpecializedServicesSection />
       </main>
       <Footer />

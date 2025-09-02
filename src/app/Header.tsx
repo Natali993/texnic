@@ -26,11 +26,6 @@ const NavigationMenu = () => {
       <nav className="hidden lg:block">
         <ul className="flex items-center space-x-8 text-white">
           <li>
-            <Link href="/" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Головна
-            </Link>
-          </li>
-          <li>
             <Link href="/elektromontazhni-roboty" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
               Електромонтаж
             </Link>
@@ -38,7 +33,7 @@ const NavigationMenu = () => {
           
           <li>
             <Link href="/posluhy" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Послуги
+              Електрична лабораторія
             </Link>
           </li>
           <li>
@@ -87,18 +82,13 @@ const NavigationMenu = () => {
           <nav className="container mx-auto px-4 py-4">
             <ul className="space-y-4 text-white">
               <li>
-                <Link href="/" className="block hover:text-cyan-400 transition-colors duration-300">
-                  Головна
-                </Link>
-              </li>
-              <li>
                 <Link href="/elektromontazhni-roboty" className="block hover:text-cyan-400 transition-colors duration-300">
                   Електромонтаж
                 </Link>
               </li>
               <li>
                 <Link href="/posluhy" className="block hover:text-cyan-400 transition-colors duration-300">
-                  Послуги
+                  Електрична лабораторія
                 </Link>
               </li>
               <li>

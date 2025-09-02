@@ -47,10 +47,22 @@ const CategoryCard = ({ category, index }: { category: any, index: number }) => 
 export function SpecializedServicesSection() {
   const categories = [
     {
-      name: 'ВНУТРІШНІ РОБОТИ',
-      imageSrc: '/pictures1.png',
+      name: 'ЕЛЕКТОМОНТАЖНІ РОБОТИ',
+      imageSrc: '/pictures8.png',
       altText: 'Професійний електрик європейської зовнішності встановлює внутрішню електропроводку',
-      href: '/vnutrishni-roboty/',
+      href: '/elektromontazhni-roboty',
+    },
+    {
+      name: 'ЕЛЕКТРИЧНА ЛАБОРАТОРІЯ',
+      imageSrc: '/pictures5.png',
+      altText: 'Послуги вимірювання ізоляції',
+      href: '/osvitlennya/',
+    },
+    {
+      name: 'БЛИСКАВКОЗАХИСТ',
+      imageSrc: '/pictures3.png',
+      altText: 'Встановлення камер відеоспостереження та систем безпеки',
+      href: '/systemy-bezpeky/',
     },
     {
       name: 'ПРОТИПОЖЕЖНА ОБРОБКА',
@@ -59,41 +71,11 @@ export function SpecializedServicesSection() {
       href: '/protypozhezhna-obrobka/',
     },
     {
-      name: 'СИСТЕМИ БЕЗПЕКИ',
-      imageSrc: '/pictures3.png',
-      altText: 'Встановлення камер відеоспостереження та систем безпеки',
-      href: '/systemy-bezpeky/',
-    },
-    {
-      name: 'ОСВІТЛЕННЯ',
+      name: 'СОНЯЧНІ ЕЛЕКСТРОСТАНЦІЇ',
       imageSrc: '/pictures4.png',
-      altText: 'Встановлення вуличного освітлення на вишці електромонтажниками',
-      href: '/osvitlennya/',
-    },
-    {
-      name: 'АВТОМАТИЗАЦІЯ',
-      imageSrc: '/pictures5.png',
       altText: 'Електричні панелі управління та системи автоматизації',
       href: '/avtomatyzaciya/'
-    },
-    {
-      name: 'ЕНЕРГОАУДИТ',
-      imageSrc: '/pictures6.png',
-      altText: 'Енергетичний аудит промислових об\'єктів та електрообладнання',
-      href: '/energoaudyt/',
-    },
-    {
-      name: 'КОНСУЛЬТАЦІЇ',
-      imageSrc: '/pictures7.png',
-      altText: 'Професійні консультації з електромонтажу від українських спеціалістів',
-      href: '/konsultacii/',
-    },
-    {
-      name: 'СЕРВІС',
-      imageSrc: '/pictures8.png',
-      altText: 'Технічне обслуговування електрообладнання',
-      href: '/servis/',
-    },
+    }
   ];
 
   return (
@@ -102,16 +84,16 @@ export function SpecializedServicesSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-gray-800 mb-6">
-            Спеціалізовані <span className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">ПОСЛУГИ</span>
+            Види <span className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">ПОСЛУГ</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-teal-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Додаткові спеціалізовані послуги для повного забезпечення ваших потреб
+            Оберіть категорію, щоб дізнатись деталі
           </p>
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
           {categories.map((category, index) => (
             <CategoryCard key={index} category={category} index={index} />
           ))}
