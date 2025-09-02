@@ -32,7 +32,7 @@ const NavigationMenu = () => {
           </li>
           
           <li>
-            <Link href="/posluhy" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link href="/electrichna-laboratoria" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
               Електрична лабораторія
             </Link>
           </li>

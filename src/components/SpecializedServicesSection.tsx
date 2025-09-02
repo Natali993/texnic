@@ -56,25 +56,25 @@ export function SpecializedServicesSection() {
       name: 'ЕЛЕКТРИЧНА ЛАБОРАТОРІЯ',
       imageSrc: '/pictures5.png',
       altText: 'Послуги вимірювання ізоляції',
-      href: '/osvitlennya/',
+      href: '/electrichna-laboratoria/',
     },
     {
       name: 'БЛИСКАВКОЗАХИСТ',
       imageSrc: '/pictures3.png',
       altText: 'Встановлення камер відеоспостереження та систем безпеки',
-      href: '/systemy-bezpeky/',
+      href: '/blyskaykozahyst',
     },
     {
       name: 'ПРОТИПОЖЕЖНА ОБРОБКА',
       imageSrc: '/pictures2.png',
       altText: 'Встановлення протипожежних систем та електричної сигналізації',
-      href: '/protypozhezhna-obrobka/',
+      href: '/antifire-obrobka/',
     },
     {
       name: 'СОНЯЧНІ ЕЛЕКСТРОСТАНЦІЇ',
       imageSrc: '/pictures4.png',
       altText: 'Електричні панелі управління та системи автоматизації',
-      href: '/avtomatyzaciya/'
+      href: '/sonychni-elektrostancii/'
     }
   ];
 
