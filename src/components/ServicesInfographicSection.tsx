@@ -1,48 +1,42 @@
 'use client';
 import Link from 'next/link';
 
-const ServiceInfographicCard = ({ service, index }: { service: any, index: number }) => {
+const ServiceTile = ({ service, index }: { service: any, index: number }) => {
   return (
     <Link href={service.href} className="group block">
-      <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
-        {/* Number Badge */}
-        <div className="absolute top-4 right-4 w-10 h-10 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-lg z-10">
-          {index + 1}
-        </div>
-        
-        {/* Icon Section */}
-        <div className="p-8 text-center">
-          <div className={`w-20 h-20 ${service.gradient} rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-            {service.icon}
+      <div className="relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden border border-gray-100 h-32 sm:h-36">
+        {/* Background Gradient */}
+        <div className={`absolute inset-0 ${service.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+
+        {/* Content */}
+        <div className="relative z-10 p-3 sm:p-4 h-full flex flex-col justify-between">
+          <div className="flex items-start justify-between">
+            <div className={`w-8 h-8 sm:w-10 sm:h-10 ${service.gradient} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
+              {service.icon}
+            </div>
+            <div className="text-xs text-gray-400 font-medium">
+              #{index + 1}
+            </div>
           </div>
-          
-          <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-cyan-600 transition-colors duration-300">
-            {service.title}
-          </h3>
-          
-          <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-            {service.description}
-          </p>
-          
-          {/* Services List */}
-          <div className="space-y-2">
-            {service.services.map((serviceItem: any, serviceIndex: number) => (
-              <div key={serviceIndex} className="flex items-center justify-between text-sm">
-                <span className="text-gray-600">{serviceItem.name}</span>
-                <Link 
-                  href={serviceItem.href}
-                  className="text-cyan-500 hover:text-cyan-600 transition-colors duration-200 opacity-0 group-hover:opacity-100"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  →
-                </Link>
-              </div>
-            ))}
+
+          <div>
+            <h3 className="text-sm sm:text-base font-bold text-gray-800 group-hover:text-cyan-600 transition-colors duration-300 leading-tight">
+              {service.name}
+            </h3>
+            <p className="text-xs text-gray-500 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {service.category}
+            </p>
           </div>
         </div>
-        
-        {/* Hover Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+        {/* Hover Arrow */}
+        <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+          <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center">
+            <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </div>
       </div>
     </Link>
   );
@@ -50,95 +44,336 @@ const ServiceInfographicCard = ({ service, index }: { service: any, index: numbe
 
 export function ServicesInfographicSection() {
   const services = [
+    // Електромонтажні роботи
     {
-      title: 'Електромонтажні роботи',
-      description: 'Повний спектр зовнішніх електромонтажних робіт від проектування до введення в експлуатацію',
-      href: '/elektromontazhni-roboty',
+      name: 'Зовнішні електричні мережі',
+      category: 'Електромонтажні роботи',
+      href: '/elektromontazhni-roboty#zovnishni-elektrichni-merezhi',
       gradient: 'bg-gradient-to-br from-cyan-500 to-teal-600',
       icon: (
-        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
-      services: [
-        { name: 'Зовнішні електричні мережі', href: '/elektromontazhni-roboty#zovnishni-elektrichni-merezhi' },
-        { name: 'Встановлення опор', href: '/elektromontazhni-roboty#vstanovlennia-opor' },
-        { name: 'Кабель в землю', href: '/elektromontazhni-roboty#kabel-v-zemliu' },
-        { name: 'Трансформаторні підстанції', href: '/elektromontazhni-roboty#transformatorni-pidstantsii' },
-        { name: 'Генератори', href: '/elektromontazhni-roboty#generatory' }
-      ]
     },
     {
-      title: 'Електрична лабораторія',
-      description: 'Професійні вимірювання та діагностика електрообладнання атестованою лабораторією',
-      href: '/electrichna-laboratoria',
+      name: 'Встановлення опор',
+      category: 'Електромонтажні роботи',
+      href: '/elektromontazhni-roboty#vstanovlennia-opor',
+      gradient: 'bg-gradient-to-br from-cyan-500 to-teal-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Прокладання кабелю в землю',
+      category: 'Електромонтажні роботи',
+      href: '/elektromontazhni-roboty#kabel-v-zemliu',
+      gradient: 'bg-gradient-to-br from-cyan-500 to-teal-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Трансформаторні підстанції',
+      category: 'Електромонтажні роботи',
+      href: '/elektromontazhni-roboty#transformatorni-pidstantsii',
+      gradient: 'bg-gradient-to-br from-cyan-500 to-teal-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Генератори',
+      category: 'Електромонтажні роботи',
+      href: '/elektromontazhni-roboty#generatory',
+      gradient: 'bg-gradient-to-br from-cyan-500 to-teal-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Електропостачання будівель',
+      category: 'Електромонтажні роботи',
+      href: '/elektromontazhni-roboty#elektropostachannia-budivel',
+      gradient: 'bg-gradient-to-br from-cyan-500 to-teal-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+      ),
+    },
+
+    // Електрична лабораторія
+    {
+      name: 'Вимірювання опору ізоляції',
+      category: 'Електрична лабораторія',
+      href: '/electrichna-laboratoria#vymiriuvannia-oporu-izoliatsii',
       gradient: 'bg-gradient-to-br from-purple-500 to-blue-600',
       icon: (
-        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
         </svg>
       ),
-      services: [
-        { name: 'Вимірювання опору ізоляції', href: '/electrichna-laboratoria#vymiriuvannia-oporu-izoliatsii' },
-        { name: 'Вимірювання опору заземлення', href: '/electrichna-laboratoria#vymiriuvannia-oporu-zazemlennia' },
-        { name: 'Перевірка релейного захисту', href: '/electrichna-laboratoria#pereviria-rele-zahystu' },
-        { name: 'Параметри електромережі', href: '/electrichna-laboratoria#vymiriuvannia-parametriv-elektromerezhі' },
-        { name: 'Тепловізорна діагностика', href: '/electrichna-laboratoria#teplovizorna-diagnostyka' }
-      ]
     },
     {
-      title: 'Блискавкозахист',
-      description: 'Комплексні системи захисту від блискавки для будівель та промислових об\'єктів',
-      href: '/blyskaykozahyst',
-      gradient: 'bg-gradient-to-br from-orange-500 to-red-600',
+      name: 'Вимірювання опору заземлення',
+      category: 'Електрична лабораторія',
+      href: '/electrichna-laboratoria#vymiriuvannia-oporu-zazemlennia',
+      gradient: 'bg-gradient-to-br from-purple-500 to-blue-600',
       icon: (
-        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Перевірка релейного захисту',
+      category: 'Електрична лабораторія',
+      href: '/electrichna-laboratoria#pereviria-rele-zahystu',
+      gradient: 'bg-gradient-to-br from-purple-500 to-blue-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01" />
         </svg>
       ),
-      services: [
-        { name: 'Зовнішній блискавкозахист', href: '/blyskaykozahyst#zovnishnii-blyskaykozahyst' },
-        { name: 'Внутрішній блискавкозахист', href: '/blyskaykozahyst#vnutrishnii-blyskaykozahyst' },
-        { name: 'Проектування систем', href: '/blyskaykozahyst#proektuvannia-blyskaykozahystu' },
-        { name: 'Промислові об\'єкти', href: '/blyskaykozahyst#blyskaykozahyst-promyslovyh-obiektiv' },
-        { name: 'Житлові будинки', href: '/blyskaykozahyst#blyskaykozahyst-zhytlovyh-budynkiv' }
-      ]
     },
     {
-      title: 'Протипожежна обробка',
-      description: 'Професійна вогнезахисна обробка конструкцій та матеріалів сертифікованими засобами',
-      href: '/antifire-obrobka',
+      name: 'Параметри електромережі',
+      category: 'Електрична лабораторія',
+      href: '/electrichna-laboratoria#vymiriuvannia-parametriv-elektromerezhі',
+      gradient: 'bg-gradient-to-br from-purple-500 to-blue-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Тепловізорна діагностика',
+      category: 'Електрична лабораторія',
+      href: '/electrichna-laboratoria#teplovizorna-diagnostyka',
+      gradient: 'bg-gradient-to-br from-purple-500 to-blue-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+      ),
+    },
+
+    // Блискавкозахист
+    {
+      name: 'Зовнішній блискавкозахист',
+      category: 'Блискавкозахист',
+      href: '/blyskaykozahyst#zovnishnii-blyskaykozahyst',
+      gradient: 'bg-gradient-to-br from-orange-500 to-red-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Внутрішній блискавкозахист',
+      category: 'Блискавкозахист',
+      href: '/blyskaykozahyst#vnutrishnii-blyskaykozahyst',
+      gradient: 'bg-gradient-to-br from-orange-500 to-red-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Проектування систем',
+      category: 'Блискавкозахист',
+      href: '/blyskaykozahyst#proektuvannia-blyskaykozahystu',
+      gradient: 'bg-gradient-to-br from-orange-500 to-red-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Обслуговування систем',
+      category: 'Блискавкозахист',
+      href: '/blyskaykozahyst#obslugovuvannia-blyskaykozahystu',
+      gradient: 'bg-gradient-to-br from-orange-500 to-red-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Промислові об\'єкти',
+      category: 'Блискавкозахист',
+      href: '/blyskaykozahyst#blyskaykozahyst-promyslovyh-obiektiv',
+      gradient: 'bg-gradient-to-br from-orange-500 to-red-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Житлові будинки',
+      category: 'Блискавкозахист',
+      href: '/blyskaykozahyst#blyskaykozahyst-zhytlovyh-budynkiv',
+      gradient: 'bg-gradient-to-br from-orange-500 to-red-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+      ),
+    },
+
+    // Протипожежна обробка
+    {
+      name: 'Дерев\'яні конструкції',
+      category: 'Протипожежна обробка',
+      href: '/antifire-obrobka#dereviani-konstruktsii',
       gradient: 'bg-gradient-to-br from-red-500 to-pink-600',
       icon: (
-        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
       ),
-      services: [
-        { name: 'Дерев\'яні конструкції', href: '/antifire-obrobka#dereviani-konstruktsii' },
-        { name: 'Металеві конструкції', href: '/antifire-obrobka#metalevi-konstruktsii' },
-        { name: 'Кабельні лінії', href: '/antifire-obrobka#kabelni-linii' },
-        { name: 'Повітропроводи', href: '/antifire-obrobka#povitroprovodу' },
-        { name: 'Протипожежні перегородки', href: '/antifire-obrobka#protypozhezhni-perehorodky' }
-      ]
     },
     {
-      title: 'Сонячні електростанції',
-      description: 'Повний цикл створення сонячних електростанцій від проектування до обслуговування',
-      href: '/sonychni-elektrostancii',
+      name: 'Металеві конструкції',
+      category: 'Протипожежна обробка',
+      href: '/antifire-obrobka#metalevi-konstruktsii',
+      gradient: 'bg-gradient-to-br from-red-500 to-pink-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Кабельні лінії',
+      category: 'Протипожежна обробка',
+      href: '/antifire-obrobka#kabelni-linii',
+      gradient: 'bg-gradient-to-br from-red-500 to-pink-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Повітропроводи',
+      category: 'Протипожежна обробка',
+      href: '/antifire-obrobka#povitroprovodу',
+      gradient: 'bg-gradient-to-br from-red-500 to-pink-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Текстильні матеріали',
+      category: 'Протипожежна обробка',
+      href: '/antifire-obrobka#tekstylni-materialy',
+      gradient: 'bg-gradient-to-br from-red-500 to-pink-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4 4 4 0 004-4V5z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Протипожежні перегородки',
+      category: 'Протипожежна обробка',
+      href: '/antifire-obrobka#protypozhezhni-perehorodky',
+      gradient: 'bg-gradient-to-br from-red-500 to-pink-600',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01" />
+        </svg>
+      ),
+    },
+
+    // Сонячні електростанції
+    {
+      name: 'Проектування СЕС',
+      category: 'Сонячні електростанції',
+      href: '/sonychni-elektrostancii#proektuvannia-ses',
       gradient: 'bg-gradient-to-br from-yellow-500 to-orange-500',
       icon: (
-        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Монтаж панелей',
+      category: 'Сонячні електростанції',
+      href: '/sonychni-elektrostancii#montazh-panelei',
+      gradient: 'bg-gradient-to-br from-yellow-500 to-orange-500',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Підключення до мережі',
+      category: 'Сонячні електростанції',
+      href: '/sonychni-elektrostancii#pidkliuchennia-do-merezhi',
+      gradient: 'bg-gradient-to-br from-yellow-500 to-orange-500',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Обслуговування СЕС',
+      category: 'Сонячні електростанції',
+      href: '/sonychni-elektrostancii#obslugovuvannia-ses',
+      gradient: 'bg-gradient-to-br from-yellow-500 to-orange-500',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Акумуляторні системи',
+      category: 'Сонячні електростанції',
+      href: '/sonychni-elektrostancii#akumuliatorni-systemy',
+      gradient: 'bg-gradient-to-br from-yellow-500 to-orange-500',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Промислові СЕС',
+      category: 'Сонячні електростанції',
+      href: '/sonychni-elektrostancii#promyslovi-ses',
+      gradient: 'bg-gradient-to-br from-yellow-500 to-orange-500',
+      icon: (
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
       ),
-      services: [
-        { name: 'Проектування СЕС', href: '/sonychni-elektrostancii#proektuvannia-ses' },
-        { name: 'Монтаж панелей', href: '/sonychni-elektrostancii#montazh-panelei' },
-        { name: 'Підключення до мережі', href: '/sonychni-elektrostancii#pidkliuchennia-do-merezhi' },
-        { name: 'Акумуляторні системи', href: '/sonychni-elektrostancii#akumuliatorni-systemy' },
-        { name: 'Промислові СЕС', href: '/sonychni-elektrostancii#promyslovi-ses' }
-      ]
     }
   ];
 
@@ -148,18 +383,18 @@ export function ServicesInfographicSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-gray-800 mb-6">
-            Детальна <span className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">ІНФОГРАФІКА</span>
+            Всі <span className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">послуги</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-teal-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Детальний огляд всіх наших послуг з можливістю переходу до конкретних розділів
+            Детальний огляд всіх наших послуг
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 max-w-4xl mx-auto ">
           {services.map((service, index) => (
-            <ServiceInfographicCard key={index} service={service} index={index} />
+            <ServiceTile key={index} service={service} index={index} />
           ))}
         </div>
 
