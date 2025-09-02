@@ -25,22 +25,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Ensure proper spacing for fixed header */
-.page-content {
-  padding-top: 120px; /* Base padding for mobile */
-}
-
-@media (min-width: 768px) {
-  .page-content {
-    padding-top: 140px; /* Medium screens */
-  }
-}
-
-@media (min-width: 1024px) {
-  .page-content {
-    padding-top: 160px; /* Large screens */
-  }
-}
+/* Layout spacing is now handled directly in Layout component */
 
 /* Smooth scrolling for anchor links */
 html {

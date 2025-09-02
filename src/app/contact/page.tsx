@@ -1,6 +1,5 @@
 "use client";
-import { Header } from '../Header';
-import { Footer } from '../Footer';
+import { Layout } from '../../components/Layout';
 import { useState } from 'react';
 
 export default function Contact() {
@@ -26,18 +25,16 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-700">
-      <Header />
-      <main className="flex-1 bg-white page-content">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-gray-800 mb-6">
+    <Layout>
+        <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
+          <div className="text-center mb-12 sm:mb-16">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6 leading-tight">
               <span className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">
                 Контакти
               </span>
             </h1>
-            <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-teal-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-cyan-500 to-teal-500 mx-auto mb-4 sm:mb-6"></div>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Зв'яжіться з нами для отримання консультації або залишіть заявку
             </p>
           </div>
@@ -182,8 +179,6 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </main>
-      <Footer />
-    </div>
+    </Layout>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Logo = () => {
   return (
@@ -20,6 +20,7 @@ const Logo = () => {
 const NavigationMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const dropdownRef = useRef<HTMLLIElement>(null);
 
   const services = [
     { name: 'Електромонтажні роботи', href: '/elektromontazhni-roboty' },
@@ -29,17 +30,35 @@ const NavigationMenu = () => {
     { name: 'Протипожежна обробка', href: '/antifire-obrobka' },
   ];
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsServicesOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       {/* Desktop Navigation Menu */}
       <nav className="hidden lg:block">
         <ul className="flex items-center space-x-8 text-white">
           <li
+            ref={dropdownRef}
             className="relative group"
             onMouseEnter={() => setIsServicesOpen(true)}
             onMouseLeave={() => setIsServicesOpen(false)}
           >
-            <button className="relative hover:text-cyan-400 transition-all duration-300 font-medium flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-white/10 backdrop-blur-sm group-hover:shadow-lg">
+            <button
+              onClick={() => setIsServicesOpen(!isServicesOpen)}
+              className="relative hover:text-cyan-400 transition-all duration-300 font-medium flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-white/10 backdrop-blur-sm group-hover:shadow-lg"
+            >
               <span className="relative">
                 Послуги
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-teal-400 transition-all duration-300 group-hover:w-full"></span>
