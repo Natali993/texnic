@@ -35,14 +35,17 @@ const NavigationMenu = () => {
       <nav className="hidden lg:block">
         <ul className="flex items-center space-x-8 text-white">
           <li
-            className="relative"
+            className="relative group"
             onMouseEnter={() => setIsServicesOpen(true)}
             onMouseLeave={() => setIsServicesOpen(false)}
           >
-            <button className="hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center space-x-1">
-              <span>Послуги</span>
+            <button className="relative hover:text-cyan-400 transition-all duration-300 font-medium flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-white/10 backdrop-blur-sm group-hover:shadow-lg">
+              <span className="relative">
+                Послуги
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-teal-400 transition-all duration-300 group-hover:w-full"></span>
+              </span>
               <svg
-                className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`}
+                className={`w-4 h-4 transition-all duration-300 ${isServicesOpen ? 'rotate-180 text-cyan-400' : 'group-hover:text-cyan-400'}`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -52,19 +55,48 @@ const NavigationMenu = () => {
             </button>
 
             {/* Dropdown Menu */}
-            <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 transition-all duration-300 z-50 ${
-              isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+            <div className={`absolute top-full left-0 mt-3 w-72 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 transition-all duration-500 z-50 overflow-hidden ${
+              isServicesOpen ? 'opacity-100 visible translate-y-0 scale-100' : 'opacity-0 invisible -translate-y-4 scale-95'
             }`}>
+              {/* Dropdown Header */}
+              <div className="bg-gradient-to-r from-cyan-500 to-teal-500 px-6 py-4">
+                <h3 className="text-white font-bold text-lg">Наші послуги</h3>
+                <p className="text-cyan-100 text-sm">Оберіть категорію</p>
+              </div>
+
               <div className="py-2">
                 {services.map((service, index) => (
                   <Link
                     key={index}
                     href={service.href}
-                    className="block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-cyan-50 hover:to-teal-50 hover:text-cyan-600 transition-all duration-200 font-medium"
+                    className="group/item flex items-center px-6 py-4 text-gray-700 hover:bg-gradient-to-r hover:from-cyan-50 hover:to-teal-50 hover:text-cyan-600 transition-all duration-300 font-medium border-l-4 border-transparent hover:border-cyan-400"
                   >
-                    {service.name}
+                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center mr-3 opacity-0 group-hover/item:opacity-100 transition-all duration-300 transform scale-0 group-hover/item:scale-100">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <div className="flex-1 transform group-hover/item:translate-x-2 transition-transform duration-300">
+                      <div className="font-semibold">{service.name}</div>
+                      <div className="text-xs text-gray-500 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300">
+                        Детальніше →
+                      </div>
+                    </div>
                   </Link>
                 ))}
+              </div>
+
+              {/* Dropdown Footer */}
+              <div className="bg-gray-50 px-6 py-3 border-t border-gray-100">
+                <Link
+                  href="/contact"
+                  className="text-sm text-cyan-600 hover:text-cyan-700 font-medium flex items-center justify-center space-x-2 transition-colors duration-200"
+                >
+                  <span>Потрібна консультація?</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
               </div>
             </div>
           </li>
@@ -82,10 +114,11 @@ const NavigationMenu = () => {
 
       {/* Mobile Menu Button */}
       <button
-        className="lg:hidden text-white p-2"
+        className="lg:hidden text-white p-3 rounded-lg hover:bg-white/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label={isMenuOpen ? "Закрити меню" : "Відкрити меню"}
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className={`w-6 h-6 transition-transform duration-300 ${isMenuOpen ? 'rotate-90' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           {isMenuOpen ? (
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           ) : (
@@ -95,36 +128,51 @@ const NavigationMenu = () => {
       </button>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-gray-800 border-t border-gray-700 z-50">
-          <nav className="container mx-auto px-4 py-4">
-            <ul className="space-y-4 text-white">
-              <li>
-                <div className="mb-2">
-                  <span className="block text-cyan-400 font-medium mb-2">Послуги:</span>
-                  <div className="pl-4 space-y-2">
-                    {services.map((service, index) => (
-                      <Link
-                        key={index}
-                        href={service.href}
-                        className="block hover:text-cyan-400 transition-colors duration-300 text-sm"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
+      <div className={`lg:hidden absolute top-full left-0 w-full bg-gray-800/95 backdrop-blur-xl border-t border-gray-700 z-50 transition-all duration-300 ${
+        isMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'
+      }`}>
+        <nav className="container mx-auto px-4 py-6">
+          <ul className="space-y-6 text-white">
+            <li>
+              <div className="mb-4">
+                <div className="flex items-center space-x-2 mb-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
                   </div>
+                  <span className="text-cyan-400 font-bold text-lg">Послуги</span>
                 </div>
-              </li>
-              <li>
-                <Link href="/contact" className="block text-cyan-400" onClick={() => setIsMenuOpen(false)}>
-                  Контакти
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      )}
+                <div className="grid grid-cols-1 gap-3">
+                  {services.map((service, index) => (
+                    <Link
+                      key={index}
+                      href={service.href}
+                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-all duration-300 group"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+                      <span className="text-sm font-medium group-hover:text-cyan-400 transition-colors duration-300">{service.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                className="flex items-center justify-center space-x-2 bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span>Контакти</span>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </>
   );
 };
