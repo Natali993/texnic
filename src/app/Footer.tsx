@@ -42,8 +42,8 @@ const Logo = () => {
         <Image
           src="/logotup.png"
           alt="Company Logo"
-          width={100}
-          height={50}
+          width={400}
+          height={400}
           className="object-contain mb-4 mx-auto"
         />
         <p className="text-gray-400 text-sm max-w-xs">

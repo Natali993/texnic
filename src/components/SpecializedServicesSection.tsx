@@ -48,49 +48,49 @@ export function SpecializedServicesSection() {
   const categories = [
     {
       name: 'ВНУТРІШНІ РОБОТИ',
-      imageSrc: '/electrician-work-small.jpg',
+      imageSrc: '/pictures1.png',
       altText: 'Професійний електрик європейської зовнішності встановлює внутрішню електропроводку',
       href: '/vnutrishni-roboty/',
     },
     {
       name: 'ПРОТИПОЖЕЖНА ОБРОБКА',
-      imageSrc: '/fire-alarm-installation.jpg',
+      imageSrc: '/pictures2.png',
       altText: 'Встановлення протипожежних систем та електричної сигналізації',
       href: '/protypozhezhna-obrobka/',
     },
     {
       name: 'СИСТЕМИ БЕЗПЕКИ',
-      imageSrc: '/security-surveillance.jpg',
+      imageSrc: '/pictures3.png',
       altText: 'Встановлення камер відеоспостереження та систем безпеки',
       href: '/systemy-bezpeky/',
     },
     {
       name: 'ОСВІТЛЕННЯ',
-      imageSrc: '/street-lighting-small.jpg',
+      imageSrc: '/pictures4.png',
       altText: 'Встановлення вуличного освітлення на вишці електромонтажниками',
       href: '/osvitlennya/',
     },
     {
       name: 'АВТОМАТИЗАЦІЯ',
-      imageSrc: '/automation-small.jpg',
+      imageSrc: '/pictures5.png',
       altText: 'Електричні панелі управління та системи автоматизації',
       href: '/avtomatyzaciya/'
     },
     {
       name: 'ЕНЕРГОАУДИТ',
-      imageSrc: '/industrial-energy-audit.jpg',
+      imageSrc: '/pictures6.png',
       altText: 'Енергетичний аудит промислових об\'єктів та електрообладнання',
       href: '/energoaudyt/',
     },
     {
       name: 'КОНСУЛЬТАЦІЇ',
-      imageSrc: '/consultation-small.jpg',
+      imageSrc: '/pictures7.png',
       altText: 'Професійні консультації з електромонтажу від українських спеціалістів',
       href: '/konsultacii/',
     },
     {
       name: 'СЕРВІС',
-      imageSrc: '/electrical-maintenance.jpg',
+      imageSrc: '/pictures8.png',
       altText: 'Технічне обслуговування електрообладнання',
       href: '/servis/',
     },
