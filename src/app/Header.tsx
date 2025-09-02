@@ -19,38 +19,56 @@ const Logo = () => {
 
 const NavigationMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+  const services = [
+    { name: 'Електромонтажні роботи', href: '/elektromontazhni-roboty' },
+    { name: 'Електрична лабораторія', href: '/electrichna-laboratoria' },
+    { name: 'Сонячні електростанції', href: '/sonychni-elektrostancii' },
+    { name: 'Блискавкозахист', href: '/blyskaykozahyst' },
+    { name: 'Протипожежна обробка', href: '/antifire-obrobka' },
+  ];
 
   return (
     <>
       {/* Desktop Navigation Menu */}
       <nav className="hidden lg:block">
         <ul className="flex items-center space-x-8 text-white">
-          <li>
-            <Link href="/elektromontazhni-roboty" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Електромонтаж
-            </Link>
+          <li
+            className="relative"
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
+          >
+            <button className="hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center space-x-1">
+              <span>Послуги</span>
+              <svg
+                className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {/* Dropdown Menu */}
+            <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 transition-all duration-300 z-50 ${
+              isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+            }`}>
+              <div className="py-2">
+                {services.map((service, index) => (
+                  <Link
+                    key={index}
+                    href={service.href}
+                    className="block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-cyan-50 hover:to-teal-50 hover:text-cyan-600 transition-all duration-200 font-medium"
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </li>
-          
-          <li>
-            <Link href="/electrichna-laboratoria" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Електрична лабораторія
-            </Link>
-          </li>
-          <li>
-            <Link href="/sonychni-elektrostancii" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Сонячні електростанції
-            </Link>
-          </li>
-          <li>
-            <Link href="/blyskaykozahyst" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Блискавкозахист
-            </Link>
-          </li>
-          <li>
-            <Link href="/antifire-obrobka" className="hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Протипожежна обробка
-            </Link>
-          </li>
+
           <li>
             <Link
               href="/contact"
@@ -82,32 +100,24 @@ const NavigationMenu = () => {
           <nav className="container mx-auto px-4 py-4">
             <ul className="space-y-4 text-white">
               <li>
-                <Link href="/elektromontazhni-roboty" className="block hover:text-cyan-400 transition-colors duration-300">
-                  Електромонтаж
-                </Link>
+                <div className="mb-2">
+                  <span className="block text-cyan-400 font-medium mb-2">Послуги:</span>
+                  <div className="pl-4 space-y-2">
+                    {services.map((service, index) => (
+                      <Link
+                        key={index}
+                        href={service.href}
+                        className="block hover:text-cyan-400 transition-colors duration-300 text-sm"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </li>
               <li>
-                <Link href="/posluhy" className="block hover:text-cyan-400 transition-colors duration-300">
-                  Електрична лабораторія
-                </Link>
-              </li>
-              <li>
-                <Link href="/sonychni-elektrostancii" className="block hover:text-cyan-400 transition-colors duration-300">
-                  Сонячні електростанції
-                </Link>
-              </li>
-              <li>
-                <Link href="/blyskaykozahyst" className="block hover:text-cyan-400 transition-colors duration-300">
-                  Блискавкозахист
-                </Link>
-              </li>
-              <li>
-                <Link href="/antifire-obrobka" className="block hover:text-cyan-400 transition-colors duration-300">
-                  Протипожежна обробка
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="block text-cyan-400">
+                <Link href="/contact" className="block text-cyan-400" onClick={() => setIsMenuOpen(false)}>
                   Контакти
                 </Link>
               </li>

@@ -1,8 +1,8 @@
 import { Footer } from './Footer';
 import { Header } from './Header';
 import { HeroSection } from '../components/HeroSection';
-import { ServicesSection } from '../components/ServicesSection';
 import { SpecializedServicesSection } from '../components/SpecializedServicesSection';
+import { ServicesInfographicSection } from '../components/ServicesInfographicSection';
 
 export default function Home() {
   return (
@@ -10,8 +10,8 @@ export default function Home() {
       <Header />
       <main className="flex-1 bg-white">
         <HeroSection />
-        {/* <ServicesSection /> */}
         <SpecializedServicesSection />
+        <ServicesInfographicSection />
       </main>
       <Footer />
     </div>

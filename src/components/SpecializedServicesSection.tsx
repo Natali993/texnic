@@ -71,7 +71,7 @@ export function SpecializedServicesSection() {
       href: '/antifire-obrobka/',
     },
     {
-      name: 'СОНЯЧНІ ЕЛЕКСТРОСТАНЦІЇ',
+      name: 'СОНЯЧНІ ЕЛЕКТРОСТАНЦІЇ',
       imageSrc: '/pictures4.png',
       altText: 'Електричні панелі управління та системи автоматизації',
       href: '/sonychni-elektrostancii/'
