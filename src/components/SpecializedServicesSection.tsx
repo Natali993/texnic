@@ -84,7 +84,7 @@ export function SpecializedServicesSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-gray-800 mb-6">
-            Види <span className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">ПОСЛУГ</span>
+           <span className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">ПОСЛУГИ</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-teal-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -121,7 +121,7 @@ export function SpecializedServicesSection() {
                   href="/posluhy"
                   className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all duration-300"
                 >
-                  Bci послуги
+                  ПОСЛУГИ
                 </Link>
               </div>
             </div>

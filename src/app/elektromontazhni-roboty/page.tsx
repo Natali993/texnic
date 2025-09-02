@@ -149,7 +149,7 @@ export default function ElektromontazhniRoboty() {
                 href="/posluhy"
                 className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all duration-300"
               >
-                Всі послуги
+               ПОСЛУГИ
               </Link>
             </div>
           </div>

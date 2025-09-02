@@ -79,7 +79,7 @@ const NavigationMenu = () => {
             }`}>
               {/* Dropdown Header */}
               <div className="bg-gradient-to-r from-cyan-500 to-teal-500 px-6 py-4">
-                <h3 className="text-white font-bold text-lg">Наші послуги</h3>
+                <h3 className="text-white font-bold text-lg">ПОСЛУГИ</h3>
                 <p className="text-cyan-100 text-sm">Оберіть категорію</p>
               </div>
 
