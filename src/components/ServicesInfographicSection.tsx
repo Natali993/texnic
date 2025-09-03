@@ -16,7 +16,6 @@ const ServiceTile = ({ service, index }: { service: any, index: number }) => {
               {service.icon}
             </div>
             <div className="text-xs text-gray-400 font-medium">
-              #{index + 1}
             </div>
           </div>
 
@@ -46,7 +45,7 @@ const ServiceTile = ({ service, index }: { service: any, index: number }) => {
 export function ServicesInfographicSection() {
   const services = [
     // Електромонтажні роботи
-   {
+    {
       name: 'Зовнішні електричні мережі',
       category: 'Електромонтажні роботи',
       href: '/elektromontazhni-roboty#zovnishni-elektrichni-merezhi',
