@@ -44,7 +44,7 @@ const CategoryCard = ({ category, index }: { category: any, index: number }) => 
   );
 };
 
-export function SpecializedServicesSection() {
+export function   SpecializedServicesSection() {
   const categories = [
     {
       name: 'ЕЛЕКТОМОНТАЖНІ РОБОТИ',
@@ -100,7 +100,7 @@ export function SpecializedServicesSection() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center">
+        <div id={"posluhy"} className="text-center">
           <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-12 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-teal-500/10"></div>
             <div className="relative z-10">
