@@ -28,9 +28,15 @@ body {
 /* Layout spacing is now handled directly in Layout component */
 
 /* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-padding-top: 0px;
+    scroll-behavior: smooth;
+  }
+
+  :target,
+  [id] {
+    scroll-margin-top: 154px !important;
+  }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
