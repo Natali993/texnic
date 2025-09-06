@@ -2,6 +2,9 @@ import { Layout } from '../../components/Layout';
 import Link from 'next/link';
 
 export default function AntifireObrobka() {
+  // Define a consistent gradient for the service block
+  const consistentGradient = "bg-gradient-to-br from-cyan-500 to-teal-600";
+
   return (
     <Layout>
       <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
@@ -22,17 +25,24 @@ export default function AntifireObrobka() {
         {/* Full-width Service Block with translucent background image */}
         <div className="flex justify-center mb-16">
           <div
-            className="w-full max-w-7xl rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden"
-            style={{
-              backgroundImage: 'url(/untifie.png)', // Path to your background image
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
+            className={`group relative w-full max-w-7xl overflow-hidden rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer`}
           >
-            {/* Overlay for translucency and readability */}
-            <div className="absolute inset-0 bg-white opacity-80 rounded-2xl"></div>
+            {/* Background Image Layer */}
+            <div
+              className="absolute inset-0 z-0 rounded-2xl"
+              style={{
+                backgroundImage: 'url(/untifie.png)', // Path to your background image
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                opacity: 0.25, // Adjust this value for desired translucency (0 to 1)
+              }}
+            ></div>
 
-            <div className="relative z-10"> {/* Content needs to be above the overlay */}
+            {/* Overlay for additional styling (e.g., gradient) on top of the translucent image */}
+            <div className={`absolute inset-0 ${consistentGradient} opacity-40 group-hover:opacity-30 transition-all duration-300 rounded-2xl z-10`}></div>
+
+            {/* Content needs to be above all overlays */}
+            <div className="relative z-20"> {/* Content needs to be above the overlay */}
               <h3 className="text-xl font-bold text-gray-800 mb-4">Протипожежна обробка дерев'яних конструкцій</h3>
               <p className="text-gray-600 mb-4">
                 Обробка дерев'яних елементів будівель спеціальними вогнезахисними просоченнями та фарбами.
