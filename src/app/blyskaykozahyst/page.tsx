@@ -19,21 +19,33 @@ export default function Blyskaykozahyst() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div id="zovnishnii-blyskaykozahyst" className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-            
-            <h3 className="text-xl font-bold text-gray-800 mb-4">Зовнішній блискавкозахист</h3>
-            <p className="text-gray-600 mb-4">
-              Встановлення блискавковідводів та заземлюючих пристроїв для захисту будівель від прямих ударів блискавки.
-            </p>
-            <ul className="text-gray-600 space-y-2">
-              <li>• Стрижневі блискавковідводи різної висоти</li>
-              <li>• Тросові блискавковідводи для великих об'єктів</li>
-              <li>• Сітчасті блискавковідводи для плоских дахів</li>
-              <li>• Заземлюючі контури та електроди</li>
-              <li>• Струмовідводи та кріплення</li>
-            </ul>
+        {/* Full-width Service Block with translucent background image */}
+        <div className="flex justify-center mb-16">
+          <div
+            id="zovnishnii-blyskaykozahyst"
+            className="w-full max-w-7xl rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden"
+            style={{
+              backgroundImage: 'url(/bluskzaxpng.png)', // Path to your background image
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            {/* Overlay for translucency and readability */}
+            <div className="absolute inset-0 bg-white opacity-80 rounded-2xl"></div>
+
+            <div className="relative z-10"> {/* Content needs to be above the overlay */}
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Зовнішній блискавкозахист</h3>
+              <p className="text-gray-600 mb-4">
+                Встановлення блискавковідводів та заземлюючих пристроїв для захисту будівель від прямих ударів блискавки.
+              </p>
+              <ul className="text-gray-600 space-y-2">
+                <li>• Стрижневі блискавковідводи різної висоти</li>
+                <li>• Тросові блискавковідводи для великих об'єктів</li>
+                <li>• Сітчасті блискавковідводи для плоских дахів</li>
+                <li>• Заземлюючі контури та електроди</li>
+                <li>• Струмовідводи та кріплення</li>
+              </ul>
+            </div>
           </div>
         </div>
 
