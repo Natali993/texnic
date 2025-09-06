@@ -19,23 +19,33 @@ export default function AntifireObrobka() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div id="dereviani-konstruktsii" className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-           
-            <h3 className="text-xl font-bold text-gray-800 mb-4">Протипожежна обробка дерев'яних конструкцій</h3>
-            <p className="text-gray-600 mb-4">
-              Обробка дерев'яних елементів будівель спеціальними вогнезахисними просоченнями та фарбами.
-            </p>
-            <ul className="text-gray-600 space-y-2">
-              <li>• Просочення антипіренами</li>
-              <li>• Вогнезахисні фарби та лаки</li>
-              <li>• Обробка стропильних систем</li>
-              <li>• Захист дерев'яних перекриттів</li>
-              <li>• Сертифіковані матеріали</li>
-            </ul>
+        {/* Full-width Service Block with translucent background image */}
+        <div className="flex justify-center mb-16">
+          <div
+            className="w-full max-w-7xl rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden"
+            style={{
+              backgroundImage: 'url(/untifie.png)', // Path to your background image
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            {/* Overlay for translucency and readability */}
+            <div className="absolute inset-0 bg-white opacity-80 rounded-2xl"></div>
+
+            <div className="relative z-10"> {/* Content needs to be above the overlay */}
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Протипожежна обробка дерев'яних конструкцій</h3>
+              <p className="text-gray-600 mb-4">
+                Обробка дерев'яних елементів будівель спеціальними вогнезахисними просоченнями та фарбами.
+              </p>
+              <ul className="text-gray-600 space-y-2">
+                <li>• Просочення антипіренами</li>
+                <li>• Вогнезахисні фарби та лаки</li>
+                <li>• Обробка стропильних систем</li>
+                <li>• Захист дерев'яних перекриттів</li>
+                <li>• Сертифіковані матеріали</li>
+              </ul>
+            </div>
           </div>
-                           
         </div>
 
         {/* CTA Section */}
