@@ -103,7 +103,7 @@ const AdvantagesSection = () => {
 export default function ElectrichnaLaboratoria() {
 
   return (
-    <Layout>
+    <Layout className='mt-14'>
       <LabHeroSection />
       <ServiceSection />
       <AdvantagesSection />
