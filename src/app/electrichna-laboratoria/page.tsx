@@ -104,10 +104,12 @@ export default function ElectrichnaLaboratoria() {
 
   return (
     <Layout className='mt-14'>
-      <LabHeroSection />
-      <ServiceSection />
-      <AdvantagesSection />
-      <CTASection title="Потрібні вимірювання електрообладнання?" description="Зв'яжіться з нами для консультації та замовлення послуг електричної лабораторії" />
+      <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
+        <LabHeroSection />
+        <ServiceSection />
+        <AdvantagesSection />
+        {/* <CTASection title="Потрібні вимірювання електрообладнання?" description="Зв'яжіться з нами для консультації та замовлення послуг електричної лабораторії" /> */}
+      </div>
     </Layout>
   );
 }
