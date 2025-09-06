@@ -79,15 +79,6 @@ const CategoriesMenu = () => {
         </li>
         <li>
           <Link
-            href="/posluhy"
-            className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-2"
-          >
-            <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-            <span>Послуги</span>
-          </Link>
-        </li>
-        <li>
-          <Link
             href="/sonychni-elektrostancii"
             className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-2"
           >
