@@ -2,6 +2,38 @@ import { Layout } from '../../components/Layout';
 import Link from 'next/link';
 
 export default function SonychniElektrostancii() {
+  // Define a consistent gradient for the full-width service blocks
+  const consistentGradient = "bg-gradient-to-br from-cyan-500 to-teal-600"; 
+
+  const fullWidthServices = [
+    {
+      id: "montazh-panelei",
+      title: "Монтаж панелей",
+      description: "Професійний монтаж сонячних панелей на різних типах поверхонь з гарантією якості.",
+      details: [
+        "Монтаж на скатних дахах (черепиця, метал)",
+        "Монтаж на плоских дахах з баластом",
+        "Наземні конструкції та трекери",
+        "Фасадні сонячні системи",
+        "Навіси та паркінги з СЕС"
+      ],
+      backgroundImage: '/sunpan.png',
+    },
+    {
+      id: "promyslovi-ses",
+      title: "Промислові СЕС",
+      description: "Великі сонячні електростанції для промислових підприємств та енергетичних компаній.",
+      details: [
+        "СЕС потужністю від 1 МВт",
+        "Наземні сонячні парки",
+        "Промислові дахові системи",
+        "Системи трекінгу сонця",
+        "Підключення до мереж високої напруги"
+      ],
+      backgroundImage: '/promSES.png',
+    },
+  ];
+
   return (
     <Layout>
       <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
@@ -19,63 +51,43 @@ export default function SonychniElektrostancii() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {/* Full-width Service Blocks with translucent background images */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-7xl mx-auto">
+          {fullWidthServices.map((service, index) => (
+            <div
+              key={index}
+              id={service.id}
+              className={`group relative overflow-hidden rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300`}
+              style={{
+                backgroundImage: `url(${service.backgroundImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              {/* Overlay for translucency and readability */}
+              <div className={`absolute inset-0 bg-black opacity-60 group-hover:opacity-50 transition-all duration-300 rounded-2xl`}></div>
+              
+              {/* Gradient overlay using the consistent gradient */}
+              <div className={`absolute inset-0 ${consistentGradient} opacity-40 group-hover:opacity-30 transition-all duration-300 rounded-2xl`}></div>
 
-          <div id="montazh-panelei" className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">Монтаж панелей</h3>
-            <p className="text-gray-600 mb-4">
-              Професійний монтаж сонячних панелей на різних типах поверхонь з гарантією якості.
-            </p>
-            <ul className="text-gray-600 space-y-2">
-              <li>• Монтаж на скатних дахах (черепиця, метал)</li>
-              <li>• Монтаж на плоских дахах з баластом</li>
-              <li>• Наземні конструкції та трекери</li>
-              <li>• Фасадні сонячні системи</li>
-              <li>• Навіси та паркінги з СЕС</li>
-            </ul>
-          </div>
-
-          <div id="pidkliuchennia-do-merezhi" className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">Підключення до мережі</h3>
-            <p className="text-gray-600 mb-4">
-              Повний цикл підключення СЕС до електричної мережі та оформлення "зеленого тарифу".
-            </p>
-            <ul className="text-gray-600 space-y-2">
-              <li>• Підключення інверторів та оптимізаторів</li>
-              <li>• Встановлення двонаправленого лічильника</li>
-              <li>• Оформлення документів в облененерго</li>
-              <li>• Отримання дозволів та сертифікатів</li>
-              <li>• Введення в експлуатацію</li>
-            </ul>
-          </div>
-
-          <div id="obslugovuvannia-ses" className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">Обслуговування СЕС</h3>
-            <p className="text-gray-600 mb-4">
-              Технічне обслуговування та моніторинг роботи сонячних електростанцій.
-            </p>
-            <ul className="text-gray-600 space-y-2">
-              <li>• Планове технічне обслуговування</li>
-              <li>• Діагностика та ремонт обладнання</li>
-              <li>• Моніторинг продуктивності</li>
-              <li>• Гарантійне та післягарантійне обслуговування</li>
-            </ul>
-          </div>
-
-          <div id="promyslovi-ses" className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">Промислові СЕС</h3>
-            <p className="text-gray-600 mb-4">
-              Великі сонячні електростанції для промислових підприємств та енергетичних компаній.
-            </p>
-            <ul className="text-gray-600 space-y-2">
-              <li>• СЕС потужністю від 1 МВт</li>
-              <li>• Наземні сонячні парки</li>
-              <li>• Промислові дахові системи</li>
-              <li>• Системи трекінгу сонця</li>
-              <li>• Підключення до мереж високої напруги</li>
-            </ul>
-          </div>
+              <div className="relative z-10 h-full flex flex-col justify-between text-white">
+                <div>
+                  <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
+                  <p className="text-white/90 leading-relaxed mb-4">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.details.map((detail, detailIndex) => (
+                      <li key={detailIndex} className="flex items-center text-white/80 text-sm">
+                        <svg className="w-4 h-4 mr-2 text-cyan-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Types Section */}
