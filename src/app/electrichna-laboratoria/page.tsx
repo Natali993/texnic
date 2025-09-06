@@ -7,7 +7,8 @@ export default function ElectrichnaLaboratoria() {
       id: "vymiriuvannia-oporu-izoliatsii",
       title: "Вимірювання опору ізоляції",
       description: "Професійні заміри опору ізоляції електричних мереж, кабелів та електрообладнання до 1000В та вище",
-
+      // Add a specific background image for this service
+      backgroundImage: '/opir-izol.png', 
       gradient: "bg-gradient-to-br from-cyan-500 to-teal-600",
       details: [
         "Вимірювання опору ізоляції кабельних ліній",
@@ -20,6 +21,8 @@ export default function ElectrichnaLaboratoria() {
       id: "vymiriuvannia-oporu-zazemlennia",
       title: "Вимірювання опору заземлення",
       description: "Точні заміри опору заземлюючих пристроїв та перевірка ефективності систем заземлення",
+      // Add a specific background image for this service
+      backgroundImage: '/opir-zazem.png', 
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -52,11 +55,25 @@ export default function ElectrichnaLaboratoria() {
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* Services Grid with translucent background images */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => (
-            <div key={index} id={service.id} className={`group relative overflow-hidden rounded-2xl ${service.gradient} p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer`}>
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+            <div
+              key={index}
+              id={service.id}
+              className={`group relative overflow-hidden rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer`}
+              style={{
+                backgroundImage: `url(${service.backgroundImage})`, // Use the specific background image
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              {/* Overlay for translucency and readability */}
+              <div className={`absolute inset-0 bg-black opacity-60 group-hover:opacity-50 transition-all duration-300 rounded-2xl`}></div>
+              
+              {/* Optional: Add a gradient overlay on top of the image overlay for extra style */}
+              <div className={`absolute inset-0 ${service.gradient} opacity-40 group-hover:opacity-30 transition-all duration-300 rounded-2xl`}></div>
+
               <div className="relative z-10 h-full flex flex-col justify-between text-white">
                 <div>
                   <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
@@ -64,12 +81,15 @@ export default function ElectrichnaLaboratoria() {
                   <ul className="space-y-2">
                     {service.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className="flex items-center text-white/80 text-sm">
-
+                        <svg className="w-4 h-4 mr-2 text-cyan-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"></path>
+                        </svg>
                         {detail}
                       </li>
                     ))}
                   </ul>
                 </div>
+                {service.icon && <div className="mt-6 flex justify-end">{service.icon}</div>}
               </div>
             </div>
           ))}
