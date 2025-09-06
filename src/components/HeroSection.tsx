@@ -11,7 +11,7 @@ export const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center pt-20 md:pt-33">
+        <div className="flex flex-col lg:flex-row items-center pt-10 md:pt-33">
           {/* Left Content */}
           <div className="lg:w-1/2 text-white mb-12 lg:mb-0">
             <div className="max-w-xl">
@@ -63,8 +63,8 @@ export const HeroSection = () => {
           </div>
 
           {/* Right Content - Hero Image */}
-          <div className="lg:w-1/2 relative flex justify-center lg:justify-end w-full">
-            <div className="relative w-full max-w-md lg:max-w-lg">
+          <div className="md:max-w-1/2 w-full lg:ml-32 lg:mr-10 relative flex justify-center lg:justify-end w-full">
+            <div className="relative w-full max-w-md pb-4 lg:max-w-lg">
               {/* Background Glow */}
               <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-2xl blur opacity-30"></div>
 

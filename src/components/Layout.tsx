@@ -10,7 +10,7 @@ export function Layout({ children, className = '' }: LayoutProps) {
   return (
     <div className="flex flex-col min-h-screen font-sans text-gray-700">
       <Header />
-      <main className={`flex-1 bg-white pt-40 lg:pt-32 ${className}`}>
+      <main className={`flex-1 bg-white pt-20 lg:pt-24 ${className}`}>
         {children}
       </main>
       <Footer />

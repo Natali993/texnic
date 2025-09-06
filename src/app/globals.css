@@ -35,7 +35,7 @@ body {
 
   :target,
   [id] {
-    scroll-margin-top: 154px !important;
+    scroll-margin-top: 140px !important;
   }
 
 /* Custom scrollbar */
@@ -58,6 +58,10 @@ body {
 
 /* Mobile optimizations */
 @media (max-width: 640px) {
+    :target,
+  [id] {
+    scroll-margin-top: 90px !important;
+  }
   /* Prevent horizontal scroll */
   body {
     overflow-x: hidden;
