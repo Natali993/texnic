@@ -53,7 +53,7 @@ export const HeroSection = () => {
                   ПОСЛУГИ
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/contact#contact-form"
                   className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 text-center text-sm sm:text-base"
                 >
                   Залишити заявку

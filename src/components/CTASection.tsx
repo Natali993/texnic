@@ -12,13 +12,13 @@ export const CTASection = ({ title, description }: { title: string, description:
       </p>
       <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
         <Link
-          href="/contact"
+          href="/contact#contact-form"
           className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
         >
           Залишити заявку
         </Link>
         <Link
-          href="/posluhy"
+          href="/#posluhy"
           className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all duration-300"
         >
           ПОСЛУГИ

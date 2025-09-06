@@ -108,7 +108,7 @@ const NavigationMenu = () => {
               {/* Dropdown Footer */}
               <div className="bg-gray-50 px-6 py-3 border-t border-gray-100">
                 <Link
-                  href="/contact"
+                  href="/contact#contact-form"
                   className="text-sm text-cyan-600 hover:text-cyan-700 font-medium flex items-center justify-center space-x-2 transition-colors duration-200"
                 >
                   <span>Потрібна консультація?</span>
