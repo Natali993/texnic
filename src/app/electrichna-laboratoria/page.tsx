@@ -7,11 +7,7 @@ export default function ElectrichnaLaboratoria() {
       id: "vymiriuvannia-oporu-izoliatsii",
       title: "Вимірювання опору ізоляції",
       description: "Професійні заміри опору ізоляції електричних мереж, кабелів та електрообладнання до 1000В та вище",
-      icon: (
-        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-        </svg>
-      ),
+
       gradient: "bg-gradient-to-br from-cyan-500 to-teal-600",
       details: [
         "Вимірювання опору ізоляції кабельних ліній",
@@ -62,25 +58,13 @@ export default function ElectrichnaLaboratoria() {
             <div key={index} id={service.id} className={`group relative overflow-hidden rounded-2xl ${service.gradient} p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer`}>
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
               <div className="relative z-10 h-full flex flex-col justify-between text-white">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    {service.icon}
-                  </div>
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                </div>
                 <div>
                   <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
                   <p className="text-white/90 leading-relaxed mb-4">{service.description}</p>
                   <ul className="space-y-2">
                     {service.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className="flex items-center text-white/80 text-sm">
-                        <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
+
                         {detail}
                       </li>
                     ))}
