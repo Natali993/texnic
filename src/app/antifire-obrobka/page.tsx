@@ -1,86 +1,17 @@
 import { Layout } from '../../components/Layout';
-import Link from 'next/link';
+import { ServiceBlock } from '@/components/ServiceBlock';
+import { CTASection } from '@/components/CTASection';
+import { blockData } from './blockData';
+import { HeroSection } from './HeroSection';
 
 export default function AntifireObrobka() {
-  // Define a consistent gradient for the service block
-  const consistentGradient = "bg-gradient-to-br from-cyan-500 to-teal-600";
-
   return (
     <Layout>
       <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">
-              Протипожежна
-            </span>{' '}
-            обробка
-          </h1>
-          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-cyan-500 to-teal-500 mx-auto mb-4 sm:mb-6"></div>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-            Професійна протипожежна обробка дерев'яних та металевих конструкцій, кабельних ліній та повітропроводів для підвищення вогнестійкості
-          </p>
-        </div>
-
-        {/* Full-width Service Block with translucent background image */}
-        <div className="flex justify-center mb-16">
-          <div
-            className={`group relative w-full max-w-7xl overflow-hidden rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer`}
-          >
-            {/* Background Image Layer */}
-            <div
-              className="absolute inset-0 z-0 rounded-2xl"
-              style={{
-                backgroundImage: 'url(/untifie.png)', // Path to your background image
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                opacity: 0.25, // Adjust this value for desired translucency (0 to 1)
-              }}
-            ></div>
-
-            {/* Overlay for additional styling (e.g., gradient) on top of the translucent image */}
-            <div className={`absolute inset-0 ${consistentGradient} opacity-40 group-hover:opacity-30 transition-all duration-300 rounded-2xl z-10`}></div>
-
-            {/* Content needs to be above all overlays */}
-            <div className="relative z-20"> {/* Content needs to be above the overlay */}
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Протипожежна обробка дерев'яних конструкцій</h3>
-              <p className="text-gray-600 mb-4">
-                Обробка дерев'яних елементів будівель спеціальними вогнезахисними просоченнями та фарбами.
-              </p>
-              <ul className="text-gray-600 space-y-2">
-                <li>• Просочення антипіренами</li>
-                <li>• Вогнезахисні фарби та лаки</li>
-                <li>• Обробка стропильних систем</li>
-                <li>• Захист дерев'яних перекриттів</li>
-                <li>• Сертифіковані матеріали</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Захистіть свій об'єкт від пожежі вже сьогодні!
-          </h2>
-          <p className="text-gray-300 mb-8 text-lg">
-            Отримайте професійну консультацію з пожежної безпеки
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              Залишити заявку
-            </Link>
-            <Link
-              href="/posluhy"
-              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all duration-300"
-            >
-              ПОСЛУГИ
-            </Link>
-          </div>
-        </div>
+        <HeroSection />
+        <ServiceBlock service={blockData} index={0} />
+        <div className="mb-16" />
+        <CTASection title="Захистіть свій об'єкт від пожежі" description="Отримайте професійну консультацію з пожежної безпеки" />
       </div>
     </Layout>
   );

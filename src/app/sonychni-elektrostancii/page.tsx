@@ -1,38 +1,10 @@
 import { Layout } from '../../components/Layout';
 import Link from 'next/link';
+import { consistentGradient } from '../../helpers/globalVar';
+import { fullWidthServices } from './fullWidthServices';
+import { CTASection } from '@/components/CTASection';
 
 export default function SonychniElektrostancii() {
-  // Define a consistent gradient for the full-width service blocks
-  const consistentGradient = "bg-gradient-to-br from-cyan-500 to-teal-600"; 
-
-  const fullWidthServices = [
-    {
-      id: "montazh-panelei",
-      title: "Монтаж панелей",
-      description: "Професійний монтаж сонячних панелей на різних типах поверхонь з гарантією якості.",
-      details: [
-        "Монтаж на скатних дахах (черепиця, метал)",
-        "Монтаж на плоских дахах з баластом",
-        "Наземні конструкції та трекери",
-        "Фасадні сонячні системи",
-        "Навіси та паркінги з СЕС"
-      ],
-      backgroundImage: '/sunpan.png',
-    },
-    {
-      id: "promyslovi-ses",
-      title: "Промислові СЕС",
-      description: "Великі сонячні електростанції для промислових підприємств та енергетичних компаній.",
-      details: [
-        "СЕС потужністю від 1 МВт",
-        "Наземні сонячні парки",
-        "Промислові дахові системи",
-        "Системи трекінгу сонця",
-        "Підключення до мереж високої напруги"
-      ],
-      backgroundImage: '/promSES.png',
-    },
-  ];
 
   return (
     <Layout>
@@ -120,29 +92,7 @@ export default function SonychniElektrostancii() {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Хочете встановити сонячну електростанцію?
-          </h2>
-          <p className="text-gray-300 mb-8 text-lg">
-            Отримайте безкоштовну консультацію та розрахунок вартості проекту
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              Безкоштовна консультація
-            </Link>
-            <Link
-              href="/posluhy"
-              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all duration-300"
-            >
-              ПОСЛУГИ
-            </Link>
-          </div>
-        </div>
+        <CTASection title="Хочете встановити сонячну електростанцію?" description="Отримайте безкоштовну консультацію та розрахунок вартості проекту" />
       </div>
     </Layout>
   );
