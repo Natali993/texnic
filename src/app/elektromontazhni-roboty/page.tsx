@@ -68,7 +68,7 @@ export default function ElektromontazhniRoboty() {
         "Системи автоматичного запуску АВР",
         "Підключення до мережі будівлі"
       ],
-      backgroundImage: '/electrical-substation.png',
+      backgroundImage: '/generator.png',
       gradient: consistentGradient, // Use the consistent gradient
     },
     {
@@ -81,7 +81,7 @@ export default function ElektromontazhniRoboty() {
         "Облікові щити та лічильники",
         "Системи резервного живлення"
       ],
-      backgroundImage: '/electrical-substation.png',
+      backgroundImage: '/electro-build.png',
       gradient: consistentGradient, // Use the consistent gradient
     },
   ];

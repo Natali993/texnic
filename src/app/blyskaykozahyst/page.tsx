@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Blyskaykozahyst() {
   // Define a consistent gradient for the service block
-  const consistentGradient = "bg-gradient-to-br from-cyan-500 to-teal-600";
+  const consistentGradient = "bg-gradient-to-br from-blue-500 to-indigo-600";
 
   return (
     <Layout>
