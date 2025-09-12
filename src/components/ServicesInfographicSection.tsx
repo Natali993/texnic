@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const ServiceTile = ({ service }: { service: any }) => {
   return (
-    <Link href={service.href} className="group block">
+    <div className="group block">
       <div
         className="relative rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden h-40 sm:h-44 bg-cover bg-center border border-gray-200"
         style={{ backgroundImage: `url(${service.image})` }}
@@ -21,8 +21,13 @@ const ServiceTile = ({ service }: { service: any }) => {
             {service.category}
           </p>
         </div>
+
+        {/* Full-tile clickable link (covers entire image area) */}
+        <Link href={service.href} className="absolute inset-0 z-20" aria-label={service.name}>
+          <span className="sr-only">Перейти: {service.name}</span>
+        </Link>
       </div>
-    </Link>
+    </div>
   );
 };
 
