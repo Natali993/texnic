@@ -31,15 +31,15 @@ export const HeroSection = () => {
               </p>
 
               <div className="grid grid-cols-3 gap-4 sm:gap-6 mb-8">
-                <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="text-center bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">100+</div>
                   <div className="text-xs sm:text-sm text-gray-400">Проектів</div>
                 </div>
-                <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">15+</div>
+                <div className="text-center bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">20+</div>
                   <div className="text-xs sm:text-sm text-gray-400">Років досвіду</div>
                 </div>
-                <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="text-center bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">24/7</div>
                   <div className="text-xs sm:text-sm text-gray-400">Підтримка</div>
                 </div>
@@ -69,7 +69,7 @@ export const HeroSection = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-2xl blur opacity-30"></div>
 
               {/* Image Container with Floating Cards */}
-              <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20">
+              <div className="relative bg-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20">
                 <Image
                   src="/pictures9.png"
                   alt="Електромонтажники європейської зовнішності працюють на вишці"
@@ -78,7 +78,7 @@ export const HeroSection = () => {
                   className="rounded-xl shadow-2xl w-full h-auto"
                 />
 
-                <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 lg:-top-8 lg:-left-8 bg-white/10 backdrop-blur-sm rounded-xl p-2 sm:p-3 lg:p-4 border border-white/20 hidden sm:block">
+                <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 lg:-top-8 lg:-left-8 bg-white/10 rounded-xl p-2 sm:p-3 lg:p-4 border border-white/20 hidden sm:block">
                   <div className="flex items-center space-x-2 lg:space-x-3">
                     <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center">
                       <svg className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -92,7 +92,7 @@ export const HeroSection = () => {
                   </div>
                 </div>
 
-                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 lg:-bottom-8 lg:-right-8 bg-white/10 backdrop-blur-sm rounded-xl p-2 sm:p-3 lg:p-4 border border-white/20 hidden sm:block">
+                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 lg:-bottom-8 lg:-right-8 bg-white/10 rounded-xl p-2 sm:p-3 lg:p-4 border border-white/20 hidden sm:block">
                   <div className="flex items-center space-x-2 lg:space-x-3">
                     <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center">
                       <svg className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

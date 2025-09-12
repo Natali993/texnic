@@ -57,7 +57,7 @@ const NavigationMenu = () => {
           >
             <button
               onClick={() => setIsServicesOpen(!isServicesOpen)}
-              className="relative hover:text-cyan-400 transition-all duration-300 font-medium flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-white/10 backdrop-blur-sm group-hover:shadow-lg"
+              className="relative hover:text-cyan-400 transition-all duration-300 font-medium flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-white/10 group-hover:shadow-lg"
             >
               <span className="relative">
                 Послуги
@@ -74,9 +74,8 @@ const NavigationMenu = () => {
             </button>
 
             {/* Dropdown Menu */}
-            <div className={`absolute top-full left-0 mt-3 w-72 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 transition-all duration-500 z-50 overflow-hidden ${
-              isServicesOpen ? 'opacity-100 visible translate-y-0 scale-100' : 'opacity-0 invisible -translate-y-4 scale-95'
-            }`}>
+            <div className={`absolute top-full left-0 mt-3 w-72 bg-white/95 rounded-2xl shadow-2xl border border-gray-200/50 transition-all duration-500 z-50 overflow-hidden ${isServicesOpen ? 'opacity-100 visible translate-y-0 scale-100' : 'opacity-0 invisible -translate-y-4 scale-95'
+              }`}>
               {/* Dropdown Header */}
               <div className="bg-gradient-to-r from-cyan-500 to-teal-500 px-6 py-4">
                 <h3 className="text-white font-bold text-lg">ПОСЛУГИ</h3>
@@ -147,9 +146,8 @@ const NavigationMenu = () => {
       </button>
 
       {/* Mobile Menu */}
-      <div className={`lg:hidden absolute top-full left-0 w-full bg-gray-800/95 backdrop-blur-xl border-t border-gray-700 z-50 transition-all duration-300 ${
-        isMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'
-      }`}>
+      <div className={`lg:hidden absolute top-full left-0 w-full bg-gray-800/95 border-t border-gray-700 z-50 transition-all duration-300 ${isMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'
+        }`}>
         <nav className="container mx-auto px-4 py-6">
           <ul className="space-y-6 text-white">
             <li>
@@ -204,10 +202,16 @@ const Subheader = () => {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <svg className="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
               <span>+38 (067) 360 75 20</span>
             </div>
+          </div>
+          <div className="flex items-center space-x-2 text-sm font-semibold">
+            <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            <span>Нам понад 20 років</span>
           </div>
         </div>
       </div>

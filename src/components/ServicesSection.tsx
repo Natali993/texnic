@@ -7,7 +7,7 @@ const ServiceCard = ({ href, title, description, icon, gradient }: any) => {
       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
       <div className="relative z-10 h-full flex flex-col justify-between text-white">
         <div className="flex items-center justify-between">
-          <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+          <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
             {icon}
           </div>
           <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -66,7 +66,7 @@ const StatsSection = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <div className="text-3xl font-bold text-gray-800 mb-2">15+</div>
+            <div className="text-3xl font-bold text-gray-800 mb-2">20+</div>
             <div className="text-gray-600">Років досвіду</div>
           </div>
           
