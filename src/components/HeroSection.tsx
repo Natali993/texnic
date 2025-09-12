@@ -26,7 +26,7 @@ export const HeroSection = () => {
               <div className="w-16 lg:w-20 h-1 bg-gradient-to-r from-cyan-400 to-teal-400 mb-6"></div>
 
               <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-                Професійні електромонтажні роботи, встановлення електричних мереж,
+                Професійні електромонтажні роботи, монтаж електричних мереж,
                 трансформаторних підстанцій та сонячних електростанцій.
               </p>
 

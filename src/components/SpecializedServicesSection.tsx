@@ -17,7 +17,9 @@ const CategoryCard = ({ category, index }: { category: any, index: number }) => 
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
         
-        {/* Hover Content */}
+  {/* (small-screen full-area link removed from image container) */}
+
+        {/* Hover Content (visible on hover / larger screens) */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
           <Link 
             href={category.href}
@@ -40,6 +42,14 @@ const CategoryCard = ({ category, index }: { category: any, index: number }) => 
       <div className="absolute top-4 right-4 w-8 h-8 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
         {index + 1}
       </div>
+      {/* Full-card clickable link for small screens */}
+      <Link
+        href={category.href}
+        className="absolute inset-0 z-20 sm:hidden"
+        aria-label={`Перейти до ${category.name}`}
+      >
+        <span className="sr-only">Перейти: {category.name}</span>
+      </Link>
     </div>
   );
 };
