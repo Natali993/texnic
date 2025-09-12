@@ -4,7 +4,7 @@ export const BlockData = {
   id: 'zovnishnii-blyskaykozahyst',
   title: 'Зовнішній блискавкозахист',
   description: 'Встановлення блискавковідводів та заземлюючих пристроїв для захисту будівель від прямих ударів блискавки.',
-  backgroundImage: '/bluskzaxpng.png', // Path to your background image
+  backgroundImage: '/bluskzaxpng.webp', // Path to your background image
   details: [
     'Стрижневі блискавковідводи різної висоти',
     'Тросові блискавковідводи для великих об\'єктів',
