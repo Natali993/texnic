@@ -58,41 +58,30 @@ const CategoriesMenu = () => {
   return (
     <div className="w-full md:w-1/3">
       <h4 className="text-xl font-bold mb-6 text-white">Категорії</h4>
-      <ul className="space-y-3">
+      <ul className="space-y-4">
         <li>
-          <Link
-            href="/"
-            className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-2"
-          >
-            <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-            <span>Головна</span>
+          <Link href="/elektromontazhni-roboty" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+            Електромонтажні роботи
           </Link>
         </li>
         <li>
-          <Link
-            href="/elektromontazhni-roboty"
-            className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-2"
-          >
-            <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-            <span>Електромонтаж</span>
+          <Link href="/electrichna-laboratoria" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+            Електрична лабораторія
           </Link>
         </li>
         <li>
-          <Link
-            href="/sonychni-elektrostancii"
-            className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-2"
-          >
-            <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-            <span>Сонячні електростанції</span>
+          <Link href="/sonychni-elektrostancii" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+            Сонячні електростанції
           </Link>
         </li>
         <li>
-          <Link
-            href="/blyskaykozahyst"
-            className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-2"
-          >
-            <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-            <span>Блискавкозахист</span>
+          <Link href="/blyskaykozahyst" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+            Блискавкозахист
+          </Link>
+        </li>
+        <li>
+          <Link href="/antifire-obrobka" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+            Протипожежна обробка
           </Link>
         </li>
       </ul>
