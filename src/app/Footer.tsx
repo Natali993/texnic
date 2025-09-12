@@ -27,7 +27,7 @@ const Contacts = () => {
             href="mailto:techprokat.rv.ua@gmail.com"
             className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
           >
-            techprokat.rv.ua@gmail.com
+            texnik.ua@gmail.com
           </a>
         </div>
       </div>
@@ -47,7 +47,7 @@ const Logo = () => {
           className="object-contain mb-4 mx-auto"
         />
         <p className="text-gray-400 text-sm max-w-xs">
-          Професійні електромонтажні роботи, встановлення електричних мереж та сонячних електростанцій
+          Професійні електромонтажні роботи, монтаж електричних мереж та сонячних електростанцій
         </p>
       </div>
     </div>
@@ -59,6 +59,11 @@ const CategoriesMenu = () => {
     <div className="w-full md:w-1/3">
       <h4 className="text-xl font-bold mb-6 text-white">Категорії</h4>
       <ul className="space-y-4">
+        <li>
+          <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+            Головна
+          </Link>
+        </li>
         <li>
           <Link href="/elektromontazhni-roboty" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
             Електромонтажні роботи
@@ -135,7 +140,7 @@ export const Footer = () => {
         <SocialLinks />
         <div className="text-center pt-8 border-t border-gray-700 mt-8">
           <p className="text-gray-400 text-sm">
-            © 2024 ElektroMontazh. Всі права захищені.
+            © 2025 ТЕХНІК. Всі права захищені.
           </p>
         </div>
       </div>
