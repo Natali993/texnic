@@ -19,7 +19,7 @@ export default function ElektromontazhniRoboty() {
           </h1>
           <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-cyan-500 to-teal-500 mx-auto mb-4 sm:mb-6"></div>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-            Професійні зовнішні електромонтажні роботи з встановлення електричних мереж
+            Професійні зовнішні електромонтажні роботи з монтажу електричних мереж,
           </p>
         </div>
 
