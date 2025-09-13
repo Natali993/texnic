@@ -7,6 +7,7 @@ interface LayoutProps {
 }
 
 export function Layout({ children, className = '' }: LayoutProps) {
+  console.log('v.6.0.3');
   return (
     <div className="flex flex-col min-h-screen font-sans text-gray-700">
       <Header />
