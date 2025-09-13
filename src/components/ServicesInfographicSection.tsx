@@ -126,7 +126,7 @@ export function ServicesInfographicSection() {
     {
       name: 'Немає потрібної послуги?',
       category: 'Напишіть нам',
-      href: '/contact',
+      href: '/contact#contact-form',
       image: '/contacts.png',
     },
   ];
