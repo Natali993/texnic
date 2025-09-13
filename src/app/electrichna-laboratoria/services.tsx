@@ -53,7 +53,7 @@ export const services = [
   {
     id: "vymiriuvannia-elecktro-zashysnykh-zasobiv",
     title: "Випробування електрозахисних засобів",
-    description: "Точні заміри опору заземлюючих пристроїв та перевірка ефективності систем заземлення",
+    description: "",
     // Add a specific background image for this service
     backgroundImage: '/electrotehnicna-lab.webp',
     icon: (
