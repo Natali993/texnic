@@ -101,3 +101,156 @@ textarea:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+/* Legacy browser color fallbacks - replace gradients with solid colors */
+
+/* Background colors */
+.bg-white { background-color: #ffffff !important; }
+.bg-gray-50 { background-color: #f9fafb !important; }
+.bg-gray-100 { background-color: #f3f4f6 !important; }
+.bg-gray-800 { background-color: #1f2937 !important; }
+.bg-gray-900 { background-color: #111827 !important; }
+.bg-cyan-500 { background-color: #06b6d4 !important; }
+.bg-teal-500 { background-color: #14b8a6 !important; }
+
+/* Text colors */
+.text-white { color: #ffffff !important; }
+.text-gray-300 { color: #d1d5db !important; }
+.text-gray-400 { color: #9ca3af !important; }
+.text-gray-600 { color: #4b5563 !important; }
+.text-gray-700 { color: #374151 !important; }
+.text-gray-800 { color: #1f2937 !important; }
+.text-cyan-400 { color: #22d3ee !important; }
+.text-cyan-500 { color: #06b6d4 !important; }
+.text-teal-500 { color: #14b8a6 !important; }
+
+/* Gradient fallbacks - replace with solid colors */
+.bg-gradient-to-br,
+.bg-gradient-to-r,
+.bg-gradient-to-l,
+.bg-gradient-to-t,
+.bg-gradient-to-b { background: #06b6d4 !important; }
+
+.from-gray-900 { background-color: #111827 !important; }
+.via-gray-800 { background-color: #1f2937 !important; }
+.to-gray-900 { background-color: #111827 !important; }
+
+.from-cyan-500 { background-color: #06b6d4 !important; }
+.to-teal-500 { background-color: #14b8a6 !important; }
+.from-cyan-400 { background-color: #22d3ee !important; }
+.to-teal-400 { background-color: #14b8a6 !important; }
+
+.from-cyan-600 { background-color: #0891b2 !important; }
+.to-teal-600 { background-color: #0d9488 !important; }
+
+/* Text gradient fallbacks */
+.bg-clip-text {
+  color: #06b6d4 !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+}
+
+/* Border colors */
+.border-white\/10,
+.border-white\/20 { border-color: rgba(255, 255, 255, 0.2) !important; }
+.border-cyan-400 { border-color: #22d3ee !important; }
+
+/* Background with opacity */
+.bg-white\/5 { background-color: rgba(255, 255, 255, 0.05) !important; }
+.bg-white\/10 { background-color: rgba(255, 255, 255, 0.1) !important; }
+.bg-white\/20 { background-color: rgba(255, 255, 255, 0.2) !important; }
+
+/* Hover states */
+.hover\:bg-cyan-400:hover { background-color: #22d3ee !important; }
+.hover\:bg-cyan-600:hover { background-color: #0891b2 !important; }
+.hover\:from-cyan-600:hover { background-color: #0891b2 !important; }
+.hover\:to-teal-600:hover { background-color: #0d9488 !important; }
+.hover\:text-cyan-600:hover { color: #0891b2 !important; }
+.hover\:text-gray-900:hover { color: #111827 !important; }
+
+/* Backdrop filter fallbacks */
+.backdrop-blur,
+.backdrop-blur-lg {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Additional color fallbacks for missing colors */
+.text-gray-400 { color: #9ca3af !important; }
+.text-cyan-300 { color: #67e8f9 !important; }
+.border-gray-700 { border-color: #374151 !important; }
+
+/* Hover color fallbacks */
+.hover\:text-cyan-300:hover { color: #67e8f9 !important; }
+.hover\:text-cyan-400:hover { color: #22d3ee !important; }
+
+/* Specific gradient combinations used in the project */
+.bg-gradient-to-r.from-gray-900.via-gray-800.to-gray-900 {
+  background: #111827 !important;
+}
+
+.bg-gradient-to-br.from-gray-900.via-gray-800.to-gray-900 {
+  background: #111827 !important;
+}
+
+/* Button gradient fallbacks */
+.bg-gradient-to-r.from-cyan-500.to-teal-500 {
+  background: #06b6d4 !important;
+}
+
+.hover\:from-cyan-600.hover\:to-teal-600:hover {
+  background: #0891b2 !important;
+}
+
+/* All gradient combinations used in the project */
+.bg-gradient-to-br.from-cyan-500.to-teal-600 { background: #06b6d4 !important; }
+.bg-gradient-to-br.from-teal-500.to-cyan-600 { background: #14b8a6 !important; }
+.bg-gradient-to-br.from-teal-600.to-cyan-500 { background: #0d9488 !important; }
+.bg-gradient-to-br.from-blue-500.to-indigo-600 { background: #3b82f6 !important; }
+
+/* Header gradients */
+.bg-gradient-to-r.from-gray-800.to-gray-900 { background: #1f2937 !important; }
+
+/* CTA Section gradients */
+.bg-gradient-to-r.from-gray-900.to-gray-800 { background: #111827 !important; }
+
+/* Background pattern gradients */
+.bg-gradient-to-r.from-cyan-500\/20.to-teal-500\/20 {
+  background: rgba(6, 182, 212, 0.2) !important;
+}
+
+/* Laboratory section gradients */
+.bg-gradient-to-r.from-gray-50.to-gray-100 { background: #f9fafb !important; }
+.bg-gradient-to-r.from-cyan-500.to-teal-500 { background: #06b6d4 !important; }
+
+/* Warning section gradients */
+.bg-gradient-to-r.from-red-50.to-orange-50 { background: #fef2f2 !important; }
+.bg-gradient-to-r.from-red-500.to-orange-500 { background: #ef4444 !important; }
+
+/* Additional color classes that might be missing */
+.from-blue-500 { background-color: #3b82f6 !important; }
+.to-indigo-600 { background-color: #4f46e5 !important; }
+.from-red-500 { background-color: #ef4444 !important; }
+.to-orange-500 { background-color: #f97316 !important; }
+.from-red-50 { background-color: #fef2f2 !important; }
+.to-orange-50 { background-color: #fff7ed !important; }
+
+/* Opacity variants */
+.from-cyan-500\/20 { background-color: rgba(6, 182, 212, 0.2) !important; }
+.to-teal-500\/20 { background-color: rgba(20, 184, 166, 0.2) !important; }
+
+/* Additional border colors */
+.border-red-100 { border-color: #fee2e2 !important; }
+
+/* Ensure all text colors work */
+.text-transparent { color: #06b6d4 !important; }
+
+/* Make sure all background colors are covered */
+.bg-red-50 { background-color: #fef2f2 !important; }
+.bg-orange-50 { background-color: #fff7ed !important; }
+.bg-blue-500 { background-color: #3b82f6 !important; }
+.bg-indigo-600 { background-color: #4f46e5 !important; }
+.bg-red-500 { background-color: #ef4444 !important; }
+.bg-orange-500 { background-color: #f97316 !important; }
