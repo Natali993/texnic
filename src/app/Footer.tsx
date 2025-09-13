@@ -96,7 +96,7 @@ const CategoriesMenu = () => {
 
 const SocialLinks = () => {
   return (
-    <div className="flex justify-center space-x-6 pt-8 border-t border-gray-700">
+    <div className="flex hidden justify-center space-x-6 pt-8 border-t border-gray-700">
       <a
         href="#"
         className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
