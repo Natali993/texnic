@@ -1,40 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Електромонтажні роботи - Веб-сайт
 
-## Getting Started
+Професійний веб-сайт для електромонтажних послуг з підтримкою старих браузерів.
 
-First, run the development server:
+## ✨ Особливості
 
+- 🎨 Сучасний дизайн з Tailwind CSS
+- 📱 Повністю адаптивний дизайн
+- 🔧 **Підтримка старих браузерів** з автоматичними fallback стилями
+- ⚡ Оптимізована продуктивність
+- 🔐 Аутентифікація з NextAuth.js
+- 📊 MongoDB для зберігання даних
+
+## 🌐 Підтримка браузерів
+
+### Сучасні браузери (повний функціонал):
+- Chrome 49+
+- Firefox 31+
+- Safari 9+
+- Edge 16+
+
+### Старі браузери (спрощені стилі):
+- Internet Explorer 9+
+- Chrome 1-48
+- Firefox 3.5-30
+- Safari 3-8
+- Opera 10+
+
+## 🚀 Швидкий старт
+
+1. **Клонування репозиторію:**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-# or
-tsc && node dist/app.js
+git clone https://github.com/Natali993/srm-tomilovich.git
+cd srm-tomilovich
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Встановлення залежностей:**
+```bash
+npm install
+```
 
-run `tsc` to compile the project and `node dist/app.js` to run the server
+3. **Запуск сервера розробки:**
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. **Відкрийте браузер:**
+Перейдіть на [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔧 Тестування підтримки старих браузерів
 
-## Learn More
+### В режимі розробки:
+1. Відкрийте сайт в браузері
+2. Натисніть на кнопку "🔧 Browser Test" в правому верхньому куті
+3. Натисніть "Toggle Legacy Mode" для перемикання між режимами
+4. Перейдіть на `/test-legacy` для тестової сторінки
 
-To learn more about Next.js, take a look at the following resources:
+### Емуляція старого браузера:
+```javascript
+// В консолі браузера:
+document.body.classList.add('legacy-fallback');
+window.location.reload();
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Структура проекту
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── globals.css        # Основні стилі
+│   ├── legacy-fallbacks.css # Fallback стилі
+│   └── layout.tsx         # Головний layout
+├── components/            # React компоненти
+│   ├── LegacyFallback.tsx # Система fallback
+│   ├── LegacyHeroSection.tsx # Спрощена версія Hero
+│   └── BrowserDetection.tsx # Детекція браузера
+├── lib/                   # Утиліти
+│   └── browser-detection.ts # Логіка детекції
+└── public/
+    └── legacy-detection.js # Скрипт детекції
+```
 
-## Deploy on Vercel
+## 🎯 Як працює підтримка старих браузерів
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Автоматична детекція:** Скрипт перевіряє підтримку сучасних CSS властивостей
+2. **Класифікація:** Браузери з підтримкою < 4 з 6 функцій вважаються "legacy"
+3. **Застосування fallback:** Автоматично додаються CSS класи та переключається контент
+4. **Спрощені компоненти:** Показуються версії з базовими стилями
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📋 Команди
+
+```bash
+# Розробка
+npm run dev
+
+# Збірка для продакшену
+npm run build
+
+# Запуск продакшен сервера
+npm start
+
+# Лінтинг
+npm run lint
+```
+
+## 🔗 Корисні посилання
+
+- [Документація по підтримці старих браузерів](./LEGACY_BROWSER_SUPPORT.md)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS](https://tailwindcss.com/docs)
