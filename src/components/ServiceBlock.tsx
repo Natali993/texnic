@@ -3,7 +3,7 @@ export const ServiceBlock = ({ service, index }: { service: any; index: number; 
     <div
       key={index}
       id={service.id}
-      className={`group relative overflow-hidden rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer`}
+      className={`group relative w-full overflow-hidden min-h-[400px] max-w-[1100px] rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer`}
       style={{
         backgroundImage: `url(${service.backgroundImage})`,
         backgroundSize: 'cover',

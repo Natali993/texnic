@@ -64,7 +64,7 @@ export function   SpecializedServicesSection() {
     },
     {
       name: 'ЕЛЕКТРОТЕХНІЧНА ЛАБОРАТОРІЯ',
-      imageSrc: '/pictures5.png',
+      imageSrc: '/electroteh-lab-vymiriuvannia-oporu-izoliatsii.webp',
       altText: 'Послуги вимірювання ізоляції',
       href: '/electrichna-laboratoria/',
     },

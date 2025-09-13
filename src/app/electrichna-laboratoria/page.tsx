@@ -53,7 +53,7 @@ const ServiceSection = () => {
                 ))}
               </ul>
             </div>
-            {service.icon && <div className="mt-6 flex justify-end">{service.icon}</div>}
+            {service?.icon && <div className="mt-6 flex justify-end">{service?.icon}</div>}
           </div>
         </div>
       ))}

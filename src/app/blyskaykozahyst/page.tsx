@@ -12,7 +12,7 @@ export default function Blyskaykozahyst() {
     <Layout>
       <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
         <HeroSection />
-        <div className='flex flex-col gap-8 mb-16'>
+        <div className='flex flex-col items-center gap-8 mb-16'>
           {BlockData.map((service, index) => (
             <ServiceBlock key={index} service={service} index={index} />
           ))}</div>
