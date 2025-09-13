@@ -3,7 +3,7 @@ import { consistentGradient } from '@/helpers/globalVar';
 export const BlockData = [
   {
     id: 'zovnishnii-blyskaykozahyst',
-    title: 'Зовнішній блискавкозахист',
+    title: 'Близкавкозахист та захист від вторинних проявів блискавки',
     description: 'Влаштування зовнішньої системи блискавкозахисту (LPS), для захисту будівель від прямих ударів блискавки.',
     backgroundImage: '/flash-2.webp', // Path to your background image
     details: [
