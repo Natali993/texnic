@@ -32,7 +32,7 @@ export const HeroSection = () => {
 
               <div className="grid grid-cols-3 gap-4 sm:gap-6 mb-8">
                 <div className="text-center bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">100+</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">1000+</div>
                   <div className="text-xs sm:text-sm text-gray-400">Проектів</div>
                 </div>
                 <div className="text-center bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">

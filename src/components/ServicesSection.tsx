@@ -46,7 +46,7 @@ const StatsSection = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <div className="text-3xl font-bold text-gray-800 mb-2">100+</div>
+            <div className="text-3xl font-bold text-gray-800 mb-2">1000+</div>
             <div className="text-gray-600">Завершених проектів</div>
           </div>
           
