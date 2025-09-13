@@ -19,7 +19,7 @@ const Logo = () => {
 
 const LogoMain = () => {
   return (
-    <Link href="/" className="flex relative mt-4 md:mt-0 px-8 h-18 overflow-hidden items-center">
+    <Link href="/" className="flex relative mt-2 md:mt-0 px-8 h-18 overflow-hidden items-center">
       <Image
         src="/tehnic-removebg-preview.png"
         alt="Company Logo"
