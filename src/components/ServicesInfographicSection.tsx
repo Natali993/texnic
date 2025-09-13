@@ -134,7 +134,7 @@ export function ServicesInfographicSection() {
   return (
     <div id={"posluhy"} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-100 sm:text-4xl">НАШІ ПОСЛУГИ</h2>
+        <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">НАШІ ПОСЛУГИ</h2>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
