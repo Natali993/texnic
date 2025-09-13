@@ -70,22 +70,40 @@ export function ServicesInfographicSection() {
       image: '/electro-build.png',
     },
     {
-      name: 'Вимірювання опору ізоляції',
+      name: 'Вимірювання та випробування електричного устаткування',
       category: 'Електротехнічна лабораторія',
       href: '/electrichna-laboratoria#vymiriuvannia-oporu-izoliatsii',
-      image: '/opir-izol.png',
+      image: '/el-lab-incide-lab.webp',
     },
     {
-      name: 'Вимірювання опору заземлення',
+      name: 'Вимірювання та випробування електроустановок напругою до 1 кВ',
       category: 'Електротехнічна лабораторія',
       href: '/electrichna-laboratoria#vymiriuvannia-oporu-zazemlennia',
       image: '/opir-zazem.png',
     },
     {
+      name: 'Випробування електрозахисних засобів',
+      category: 'Електротехнічна лабораторія',
+      href: '/electrichna-laboratoria#vymiriuvannia-elecktro-zashysnykh-zasobiv',
+      image: '/electrotehnicna-lab.webp',
+    },
+    {
       name: 'Зовнішній блискавкозахист',
       category: 'Блискавкозахист',
       href: '/blyskaykozahyst#zovnishniy-blyskavozakhist',
-      image: '/bluskzaxpng.webp',
+      image: '/flash-2.webp',
+    },
+    {
+      name: 'Активний зовнішній блискавкозахист',
+      category: 'Блискавкозахист',
+      href: '/blyskaykozahyst#active-blyskaykozahyst',
+      image: '/active-flesh-protection.webp',
+    },
+    {
+      name: 'Оформлення та видача технічної документації',
+      category: 'Блискавкозахист',
+      href: '/blyskaykozahyst#docs-blyskaykozahyst',
+      image: '/el-docs.webp',
     },
     {
       name: 'Протипожежна обробка деревʼяних конструкцій',
@@ -98,13 +116,18 @@ export function ServicesInfographicSection() {
       category: 'Сонячні електростанції',
       href: '/sonychni-elektrostancii#montazh-paneley',
       image: '/sunpan.png',
-    },
-   
+    },  
     {
       name: 'Промислові СЕС',
       category: 'Сонячні електростанції',
       href: '/sonychni-elektrostancii#promyslovi-ses',
       image: '/promSES.png',
+    },
+    {
+      name: 'Немає потрібної послуги?',
+      category: 'Напишіть нам',
+      href: '/contact',
+      image: '/contacts.png',
     },
   ];
 

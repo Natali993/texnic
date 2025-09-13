@@ -59,7 +59,7 @@ export default function Contact() {
 
   return (
     <Layout>
-      <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
+      <div className="container mx-auto px-4 max-w-5xl py-8 sm:py-12 lg:py-16">
         <div className="text-center mb-12 sm:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6 leading-tight">
             <span className="bg-white bg-clip-text text-transparent">

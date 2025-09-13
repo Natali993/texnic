@@ -16,7 +16,7 @@ export const BlockData = [
     ], gradient: consistentGradient, // Use the consistent gradient
   },
   {
-    id: 'zovnishnii-blyskaykozahyst',
+    id: 'active-blyskaykozahyst',
     title: 'Активний зовнішній блискавкозахист',
     description: 'Влаштування зовнішньої системи блискавкозахисту (E.S.E.), для захисту будівель від прямих ударів блискавки.',
     backgroundImage: '/active-flesh-protection.webp', // Path to your background image
@@ -26,7 +26,7 @@ export const BlockData = [
     ], gradient: consistentGradient, // Use the consistent gradient
   },
   {
-    id: 'zovnishnii-blyskaykozahyst',
+    id: 'docs-blyskaykozahyst',
     title: 'Технічна документація',
     description: 'Оформлення та видача технічної документації',
     backgroundImage: '/el-docs.webp', // Path to your background image
