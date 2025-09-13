@@ -19,7 +19,7 @@ const Logo = () => {
 
 const LogoMain = () => {
   return (
-    <Link href="/" className="flex relative mt-4 md:mt-0 px-8 h-14 overflow-hidden items-center">
+    <Link href="/" className="flex relative mt-4 md:mt-0 px-8 h-18 overflow-hidden items-center">
       <Image
         src="/tehnic-removebg-preview.png"
         alt="Company Logo"
@@ -27,7 +27,7 @@ const LogoMain = () => {
         height={50}
         className="object-contain"
       />
-     <div className="absolute top-10 left-0 w-full text-center !text-[6px] text-[#fff] uppercase">Товариство <br/> з обмеженою відповідальністю</div>
+     <div className="absolute top-12 left-0 w-full text-center !text-[8px] text-[#fff] uppercase">Товариство <br/> з обмеженою відповідальністю</div>
     </Link>
   );
 };
@@ -237,7 +237,7 @@ const Subheader = () => {
 const MainHeader = () => {
   return (
     <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-lg relative">
-      <div className="container mx-auto flex items-center md:h-18 justify-between items-center max-w-[1140px] py-0 px-4">
+      <div className="container mx-auto flex items-center md:h-20 justify-between items-center max-w-[1140px] py-0 px-4">
         <Logo />
         <LogoMain />
         <NavigationMenu />

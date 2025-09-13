@@ -4,7 +4,7 @@ import { CTASection } from '@/components/CTASection';
 import { useState } from 'react';
 import Image from 'next/image';
 
-export default function Сertificates() {
+export default function PageCertificates() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const certificates = [
