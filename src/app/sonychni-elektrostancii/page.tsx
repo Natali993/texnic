@@ -66,7 +66,7 @@ export default function SonychniElektrostancii() {
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Типи сонячних електростанцій</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-100">
+            <div className="bg-[#f0f9ff] rounded-2xl p-8 border border-blue-100">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Мережеві СЕС</h3>
               <p className="text-gray-600 mb-4">
                 Підключені до загальної електромережі з можливістю продажу надлишків електроенергії за "зеленим тарифом".
@@ -78,7 +78,7 @@ export default function SonychniElektrostancii() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 border border-green-100">
+            <div className="bg-[#f0f9ff] rounded-2xl p-8 border border-blue-100">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Автономні СЕС</h3>
               <p className="text-gray-600 mb-4">
                 Незалежні системи з акумуляторами для забезпечення електроенергією віддалених об'єктів.
