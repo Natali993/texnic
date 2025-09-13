@@ -21,8 +21,8 @@ export const Questions = () => {
             width="33"
             height="33"
           />
-          <a href="tel:+380673607520" className="font-black text-xl md:text-2xl text-black hover:underline transition-all duration-300">
-            +38 (067) 360 75 22
+          <a href="tel:+380673606483" className="font-black text-xl md:text-2xl text-black hover:underline transition-all duration-300">
+            +38 (067) 360 64 83
           </a>
         </div>
       </section>
