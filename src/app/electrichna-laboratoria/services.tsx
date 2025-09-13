@@ -4,7 +4,7 @@ export const services = [
     title: "Вимірювання опору ізоляції",
     description: "Професійні заміри опору ізоляції електричних мереж, кабелів та електрообладнання до 1000В та вище",
     // Add a specific background image for this service
-    backgroundImage: '/electroteh-lab-vymiriuvannia-oporu-izoliatsii.png',
+    backgroundImage: '/electroteh-lab-vymiriuvannia-oporu-izoliatsii.webp',
     gradient: "bg-gradient-to-br from-cyan-500 to-teal-600",
     details: [
       "Вимірювання опору ізоляції кабельних ліній",
@@ -37,7 +37,7 @@ export const services = [
     title: "Випробування електрозахисних засобів",
     description: "Точні заміри опору заземлюючих пристроїв та перевірка ефективності систем заземлення",
     // Add a specific background image for this service
-    backgroundImage: '/electrotehnicna-lab.png',
+    backgroundImage: '/electrotehnicna-lab.webp',
     icon: (
       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
