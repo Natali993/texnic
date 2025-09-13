@@ -4,7 +4,7 @@ export const BlockData = [
   {
     id: 'zovnishnii-blyskaykozahyst',
     title: 'Зовнішній блискавкозахист',
-    description: 'лаштування зовнішньої системи блискавкозахисту (LPS), для захисту будівель від прямих ударів блискавки.',
+    description: 'Влаштування зовнішньої системи блискавкозахисту (LPS), для захисту будівель від прямих ударів блискавки.',
     backgroundImage: '/flash-2.webp', // Path to your background image
     details: [
       "Системи перехоплення блискавки",
