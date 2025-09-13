@@ -11,7 +11,7 @@ export const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center pt-10 md:pt-33">
+        <div className="flex flex-col lg:flex-row items-center pt-18 md:pt-33">
           {/* Left Content */}
           <div className="lg:w-1/2 text-white mb-12 lg:mb-0">
             <div className="max-w-xl">
