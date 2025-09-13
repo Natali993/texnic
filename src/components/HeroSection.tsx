@@ -39,7 +39,7 @@ export const HeroSection = () => {
                   <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">20+</div>
                   <div className="text-xs sm:text-sm text-gray-400">Років досвіду</div>
                 </div>
-                <Link href="/certificates" className="text-center text-cyan-400 text-white group hover:bg-cyan-400 hover:scale-105 transition-all duration-300  bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:text-gray-900">
+                <Link href="/certificates" className="text-center text-cyan-400 text-white group hover:bg-cyan-400 hover:scale-105 transition-all duration-300  bg-white/5 rounded-xl p-1.5 flex items-center justify-center flex-col lg:p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:text-gray-900">
                   <div className="text-[12px] sm:text-xl font-bold ">Сертифікати,</div>
                   <div className="text-[10px] sm:text-xl font-bold ">дозвільні документи</div>
                 </Link>
