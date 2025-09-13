@@ -89,12 +89,12 @@ export function   SpecializedServicesSection() {
   ];
 
   return (
-    <div className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div className="py-20 bg-white from-gray-50 to-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-gray-800 mb-6">
-           <span className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">ПОСЛУГИ</span>
+           <span className=" from-cyan-500 to-teal-500 bg-clip-text text-transparent">ПОСЛУГИ</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-teal-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -112,7 +112,7 @@ export function   SpecializedServicesSection() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-12 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-teal-500/10"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-lg relative"></div>
             <div className="relative z-10">
               <h3 className="text-3xl font-bold text-white mb-4">
                 Потрібна консультація спеціаліста?

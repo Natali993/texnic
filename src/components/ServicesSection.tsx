@@ -91,7 +91,7 @@ export const ServicesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-gray-800 mb-6">
-            Наші <span className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">Послуги</span>
+            Наші <span className="bg-white bg-clip-text text-transparent">Послуги</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-teal-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
