@@ -4,39 +4,40 @@ import { CTASection } from '@/components/CTASection';
 import { useState } from 'react';
 import Image from 'next/image';
 
-export default function ElektromontazhniRoboty() {
+export default function Сertificates() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const certificates = [
     {
       id: 1,
       src: '/5343527271933279413.webp',
-      alt: 'Дозвіл №168.12.56 (роботи підвищеної небезпеки)'
+      alt: 'Дозвіл №168.12.56 (випробування електричного устатковання)'
     },
     {
       id: 2,
       src: '/5343527271933279414.webp',
-      alt: 'Ліцензія Державної інспекції техногенної безпеки України'
+      alt: 'Свідоцтво про відповідність системи керування вимірюваннями'
     },
     {
       id: 3,
       src: '/5343527271933279415.webp',
-      alt: 'Кваліфікаційний сертифікат інженера-проектувальника (І категорія)'
+      alt: 'Кваліфікаційний сертифікат інженера-проектувальника (ІI категорія, клас наслідкиів СС1)'
     },
     {
       id: 4,
       src: '/5343527271933279418.webp',
-      alt: 'Кваліфікаційний сертифікат інженера-проектувальника (ІІ категорія)'
+      alt: 'Кваліфікаційний сертифікат інженера-проектувальника (І категорія, клас наслідкиів СС1)'
     },
     {
       id: 5,
       src: '/5343527271933279419.webp',
-      alt: 'Свідоцтво про відповідність системи керування вимірюваннями'
+      alt: 'Ліцензія Державної інспекції техногенної безпеки України'
+
     },
     {
       id: 6,
       src: '/5343527271933279421.webp',
-      alt: 'Дозвіл №1125.12.30 (випробування електроустановок)'
+      alt: 'Дозвіл №1125.12.30 (роботи в діючих електроустановках)'
     }
   ];
 
@@ -48,7 +49,7 @@ export default function ElektromontazhniRoboty() {
         <div className="text-center mb-12 sm:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6 leading-tight">
             <span className="bg-white bg-clip-text text-transparent">
-              Сертифікати, 
+              Сертифікати,
             </span>{' '}
             дозвільні документи
           </h1>
