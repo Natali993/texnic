@@ -71,13 +71,13 @@ export function ServicesInfographicSection() {
     },
     {
       name: 'Вимірювання опору ізоляції',
-      category: 'Електрична лабораторія',
+      category: 'Електротехнічна лабораторія',
       href: '/electrichna-laboratoria#vymiriuvannia-oporu-izoliatsii',
       image: '/opir-izol.png',
     },
     {
       name: 'Вимірювання опору заземлення',
-      category: 'Електрична лабораторія',
+      category: 'Електротехнічна лабораторія',
       href: '/electrichna-laboratoria#vymiriuvannia-oporu-zazemlennia',
       image: '/opir-zazem.png',
     },

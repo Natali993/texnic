@@ -24,7 +24,7 @@ const Contacts = () => {
             <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
           </svg>
           <a
-            href="mailto:techprokat.rv.ua@gmail.com"
+            href="mailto:texnik.ua@gmail.com"
             className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
           >
             texnik.ua@gmail.com
@@ -71,7 +71,7 @@ const CategoriesMenu = () => {
         </li>
         <li>
           <Link href="/electrichna-laboratoria" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
-            Електрична лабораторія
+            Електротехнічна лабораторія
           </Link>
         </li>
         <li>

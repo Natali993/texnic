@@ -162,7 +162,7 @@ export const ServicesSection = () => {
           
           <ServiceCard
             href="/elektrichna-laboratoriya"
-            title="Електрична лабораторія"
+            title="Електротехнічна лабораторія"
             description="Послуги вимірювання: опір ізоляції, петля фаза-нуль та інші вимірювання"
             gradient="bg-gradient-to-br from-teal-500 to-cyan-600"
             icon={

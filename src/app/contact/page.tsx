@@ -77,7 +77,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-800 mb-2">Email</h3>
-                    <p className="text-gray-600">techprokat.rv.ua@gmail.com</p>
+                    <p className="text-gray-600">texnik.ua@gmail.com</p>
                   </div>
                 </div>
 
@@ -149,7 +149,7 @@ export default function Contact() {
                     <option value="solar">Сонячні електростанції</option>
                     <option value="lightning">Блискавкозахист</option>
                     <option value="generator">Генератори</option>
-                    <option value="laboratory">Електрична лабораторія</option>
+                    <option value="laboratory">Електротехнічна лабораторія</option>
                     <option value="other">Інше</option>
                   </select>
                 </div>

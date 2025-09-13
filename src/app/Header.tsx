@@ -24,7 +24,7 @@ const NavigationMenu = () => {
 
   const services = [
     { name: 'Електромонтажні роботи', href: '/elektromontazhni-roboty' },
-    { name: 'Електрична лабораторія', href: '/electrichna-laboratoria' },
+    { name: 'Електротехнічна лабораторія', href: '/electrichna-laboratoria' },
     { name: 'Сонячні електростанції', href: '/sonychni-elektrostancii' },
     { name: 'Блискавкозахист', href: '/blyskaykozahyst' },
     { name: 'Протипожежна обробка', href: '/antifire-obrobka' },

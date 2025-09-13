@@ -63,14 +63,14 @@ export function   SpecializedServicesSection() {
       href: '/elektromontazhni-roboty',
     },
     {
-      name: 'ЕЛЕКТРИЧНА ЛАБОРАТОРІЯ',
+      name: 'ЕЛЕКТРОТЕХНІЧНА ЛАБОРАТОРІЯ',
       imageSrc: '/pictures5.png',
       altText: 'Послуги вимірювання ізоляції',
       href: '/electrichna-laboratoria/',
     },
     {
       name: 'БЛИСКАВКОЗАХИСТ',
-      imageSrc: '/pictures3.png',
+      imageSrc: '/bluskzaxpng.webp',
       altText: 'Встановлення камер відеоспостереження та систем безпеки',
       href: '/blyskaykozahyst',
     },
