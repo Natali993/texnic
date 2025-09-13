@@ -1,42 +1,32 @@
 @import "tailwindcss";
 
-/* Fallback styles for older browsers */
-body {
-  background: #ffffff;
-  color: #171717;
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
-/* Modern browsers with CSS custom properties support */
-@supports (--css: variables) {
+html {
+  color-scheme: dark !important;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
+}
 
-  html {
-    color-scheme: dark !important;
-  }
-
-  @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: #0a0a0a;
-      --foreground: #ededed;
-    }
-  }
-
-  body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
-  }
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Layout spacing is now handled directly in Layout component */
@@ -124,38 +114,4 @@ textarea:focus-visible {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-/* Additional legacy browser support */
-.legacy-browser {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.legacy-browser body {
-  /* Override any CSS variables with solid values */
-  background: #ffffff !important;
-  color: #171717 !important;
-}
-
-/* Hide modern-only elements in legacy browsers */
-.legacy-browser .modern-only {
-  display: none !important;
-}
-
-/* Show legacy-only elements only in legacy browsers */
-.legacy-only {
-  display: none !important;
-}
-
-.legacy-browser .legacy-only {
-  display: block !important;
-}
-
-/* Ensure proper display for legacy browsers */
-.legacy-browser .modern-content {
-  display: none !important;
-}
-
-.legacy-browser .legacy-content {
-  display: block !important;
 }
