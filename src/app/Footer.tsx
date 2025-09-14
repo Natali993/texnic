@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Contacts = () => {
   return (
-    <div className="w-full md:w-1/3 mb-8 md:mb-0">
+    <div className="w-full md:w-max mb-8 md:mb-0">
       <h4 className="text-xl font-bold mb-6 text-white">Контакти</h4>
       <div className="space-y-4">
         <div className="flex items-center space-x-3">
@@ -38,7 +38,7 @@ const Contacts = () => {
 const Logo = () => {
   return (
     <div className="w-full md:w-1/3 flex justify-center items-center mb-8 md:mb-0">
-      <div className="text-center px-8">
+      <div className="flex flex-col items-center text-center px-8">
         <Image
           src="/logotup.png"
           alt="Company Logo"
@@ -46,7 +46,7 @@ const Logo = () => {
           height={400}
           className="object-contain mb-4 mx-auto"
         />
-        <p className="text-gray-400 text-sm max-w-xs">
+        <p className="text-gray-400 text-start text-sm max-w-xs">
           Професійні електромонтажні роботи, монтаж електричних мереж та сонячних електростанцій
         </p>
       </div>
@@ -56,7 +56,7 @@ const Logo = () => {
 
 const CategoriesMenu = () => {
   return (
-    <div className="w-full md:w-1/3">
+    <div className="w-full md:w-max">
       <h4 className="text-xl font-bold mb-6 text-white">Категорії</h4>
       <ul className="space-y-4">
         <li>
@@ -131,7 +131,7 @@ const SocialLinks = () => {
 export const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 mt-auto">
-      <div className="max-w-[1140px] mx-auto px-4 py-12">
+      <div className="max-w-[1504px] mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0">
           <Contacts />
           <Logo />

@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 
 const Logo = () => {
   return (
-    <Link href="/" className="hidden md:flex px-8 h-14 overflow-hidden items-center">
+    <Link href="/" className="hidden md:flex h-14 overflow-hidden items-center">
       <Image
         src="/logotup.png"
         alt="Company Logo"
@@ -212,7 +212,7 @@ const NavigationMenu = () => {
 const Subheader = () => {
   return (
     <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-2">
-      <div className="container mx-auto max-w-[1140px] px-4">
+      <div className="container mx-auto max-w-[1504px] px-4">
         <div className="flex items-center justify-between text-sm">
           <Link href={"tel:+380673606483"} className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
@@ -237,7 +237,7 @@ const Subheader = () => {
 const MainHeader = () => {
   return (
     <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-lg relative">
-      <div className="container mx-auto flex items-center md:h-20 justify-between items-center max-w-[1140px] py-0 px-4">
+      <div className="container mx-auto flex items-center md:h-20 justify-between max-w-[1504px] py-0 px-4">
         <Logo />
         <LogoMain />
         <NavigationMenu />
