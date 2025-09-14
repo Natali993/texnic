@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Contacts = () => {
   return (
-    <div className="w-full md:w-max mb-8 md:mb-2">
+    <div className="w-full md:w-max mb-8 md:mb-0">
       <h4 className="text-xl font-bold mb-6 text-white">Контакти</h4>
       <div className="space-y-4">
         <div className="flex items-center space-x-3">
