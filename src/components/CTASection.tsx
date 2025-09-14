@@ -4,7 +4,7 @@ import Link from "next/link"
 export const CTASection = ({ title, description }: { title: string, description: string }) => {
   return (
     <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-12 text-center">
-      <h2 className="text-3xl font-bold text-white mb-4">
+      <h2 className="text-2xl font-bold text-white mb-4">
         {title}
       </h2>
       <p className="text-gray-300 mb-8 text-lg">

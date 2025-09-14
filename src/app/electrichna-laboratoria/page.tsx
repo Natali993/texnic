@@ -108,7 +108,7 @@ export default function ElectrichnaLaboratoria() {
         <LabHeroSection />
         <ServiceSection />
         <AdvantagesSection />
-        {/* <CTASection title="Потрібні вимірювання електрообладнання?" description="Зв'яжіться з нами для консультації та замовлення послуг електричної лабораторії" /> */}
+        <CTASection title="Потрібні вимірювання електрообладнання?" description="Зв'яжіться з нами для консультації та замовлення послуг електричної лабораторії" />
       </div>
     </Layout>
   );
