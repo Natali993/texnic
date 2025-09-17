@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://srm-tomilovich.com'
+  const baseUrl = 'https://www.texnikua.org'
   const currentDate = new Date()
 
   // Define all your pages with their priorities and change frequencies

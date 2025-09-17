@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'uk_UA',
-    url: 'https://srm-tomilovich.com',
+    url: 'https://www.texnikua.org',
     siteName: 'Технік',
     title: 'Технік - Електромонтажні послуги',
     description: 'Професійні електромонтажні послуги в Україні. Понад 20 років досвіду.',
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     images: ['/tehnic-removebg-preview.png'],
   },
   alternates: {
-    canonical: 'https://srm-tomilovich.com',
+    canonical: 'https://www.texnikua.org',
   },
 };
 
@@ -82,8 +82,8 @@ export default function RootLayout({
     "@type": "Organization",
     "name": "Технік",
     "description": "Професійні електромонтажні послуги в Україні",
-    "url": "https://srm-tomilovich.com",
-    "logo": "https://srm-tomilovich.com/tehnic-removebg-preview.png",
+    "url": "https://www.texnikua.org",
+    "logo": "https://www.texnikua.org/tehnic-removebg-preview.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
