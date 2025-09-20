@@ -12,6 +12,7 @@
     "@auth/mongodb-adapter": "^3.10.0",
     "@emailjs/browser": "^4.4.1",
     "@types/nodemailer": "^7.0.1",
+    "@vercel/speed-insights": "^1.2.0",
     "bcryptjs": "^3.0.2",
     "mongodb": "^6.18.0",
     "mongoose": "^8.17.1",
