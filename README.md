@@ -16,6 +16,7 @@ bun dev
 tsc && node dist/app.js
 ```
 
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 run `tsc` to compile the project and `node dist/app.js` to run the server
