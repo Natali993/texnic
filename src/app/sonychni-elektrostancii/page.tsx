@@ -3,6 +3,10 @@ import Link from 'next/link';
 import { consistentGradient } from '../../helpers/globalVar';
 import { fullWidthServices } from './fullWidthServices';
 import { CTASection } from '@/components/CTASection';
+import { generateServiceMetadata } from '@/lib/metadata';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = generateServiceMetadata('solar');
 
 export default function SonychniElektrostancii() {
 

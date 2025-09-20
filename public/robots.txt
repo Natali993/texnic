@@ -1,6 +1,7 @@
-# Robots.txt for Технік - Електромонтажні послуги
-# Allow all search engines to crawl the entire site
+# Robots.txt for Технік - Електромонтажні послуги в Рівному
+# Optimized for Google indexing and local SEO
 
+# Allow all search engines to crawl the entire site
 User-agent: *
 Allow: /
 
@@ -13,17 +14,45 @@ Disallow: /api/
 Allow: /api/contact
 
 # Sitemap location
-Sitemap: https://www.texnikua.org/sitemap.xml
+Sitemap: https://www.texnikua.com/sitemap.xml
 
-# Crawl-delay for better server performance (optional)
+# Crawl-delay for better server performance
 Crawl-delay: 1
 
-# Additional directives for major search engines
+# Specific directives for major search engines
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
 
 User-agent: Slurp
 Allow: /

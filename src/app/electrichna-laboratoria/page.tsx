@@ -2,6 +2,10 @@ import { Layout } from '../../components/Layout';
 import Link from 'next/link';
 import { services } from './services';
 import { CTASection } from '@/components/CTASection';
+import { generateServiceMetadata } from '@/lib/metadata';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = generateServiceMetadata('laboratory');
 
 const LabHeroSection = () => {
   return (<div className="text-center mb-12 sm:mb-16">

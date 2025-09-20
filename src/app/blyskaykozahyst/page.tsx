@@ -5,6 +5,10 @@ import { BlockData } from './BlockData';
 import { WhyImportantSection } from './localComponents/WhyImportantSection';
 import { HeroSection } from './localComponents/HeroSection';
 import { ProcessSection } from './localComponents/ProcessSection';
+import { generateServiceMetadata } from '@/lib/metadata';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = generateServiceMetadata('lightning');
 
 export default function Blyskaykozahyst() {
 

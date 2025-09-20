@@ -3,6 +3,10 @@ import Link from 'next/link';
 import { ServiceBlock } from '../../components/ServiceBlock';
 import { serviceBlocks } from './serviceBlocksaData';
 import { CTASection } from '@/components/CTASection';
+import { generateServiceMetadata } from '@/lib/metadata';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = generateServiceMetadata('elektromontazh');
 
 export default function ElektromontazhniRoboty() {
 

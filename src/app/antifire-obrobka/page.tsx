@@ -3,6 +3,10 @@ import { ServiceBlock } from '@/components/ServiceBlock';
 import { CTASection } from '@/components/CTASection';
 import { blockData } from './blockData';
 import { HeroSection } from './HeroSection';
+import { generateServiceMetadata } from '@/lib/metadata';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = generateServiceMetadata('antifire');
 
 export default function AntifireObrobka() {
   return (
